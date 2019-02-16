@@ -5,6 +5,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   minifyCSS = require('gulp-minify-css'),
   less = require('gulp-less'),
+  scss = require('gulp-sass'),
   concat = require('gulp-concat'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
@@ -25,6 +26,17 @@ gulp.task('browserSync', function () {
 gulp.task('less', function () {
     gulp.src('src/less/global.less')
         .pipe(less())
+        .pipe(autoprefixer('last 15 versions'))
+        .pipe(minifyCSS())
+        .pipe(rename("style.min.css"))
+        .pipe(gulp.dest('./build/css/'))
+        .pipe(reload({stream:true}));
+});
+
+//scss
+gulp.task('scss', function () {
+    gulp.src('src/scss/global.scss')
+        .pipe(scss())
         .pipe(autoprefixer('last 15 versions'))
         .pipe(minifyCSS())
         .pipe(rename("style.min.css"))
@@ -56,7 +68,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('src/less/*.less', ['less']);
+  gulp.watch('src/scss/*.scss', ['scss']);
   gulp.watch('src/pug/*.pug', ['pug']);
   gulp.watch('src/pug/template/*.pug', ['pug']);
   gulp.watch('build/*.html', ['html']);
@@ -64,4 +76,4 @@ gulp.task('watch', function () {
 
 });
 
-gulp.task('default', ['browserSync', 'html', 'css', 'less', 'pug', 'watch']);
+gulp.task('default', ['browserSync', 'html', 'css', 'scss', 'pug', 'watch']);

@@ -1,0 +1,21 @@
+@import "vars";
+
+%text_overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%clearfix {
+  &:after, &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@mixin bg($img, $size: cover, $pos: center, $repeat: no-repeat) {
+  background-size: $size;
+  background-position: $pos;
+  background-repeat: $repeat;
+  background-image: url('../images/#{$img}');
+}

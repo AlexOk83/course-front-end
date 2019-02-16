@@ -1,0 +1,8 @@
+@import "fonts";
+@import "settings";
+@import "mixins";
+.image {
+  @include bg('image.jpg');
+  width: 300px;
+  height: 300px;
+}
