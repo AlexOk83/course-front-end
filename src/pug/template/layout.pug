@@ -1,10 +1,11 @@
 doctype
 include variable
 include mixins
+include example-code
 
 html(lang="ru")
     head
-        title learn fornt-end
+        title learn front-end
 
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0")
@@ -13,8 +14,8 @@ html(lang="ru")
 
     body
       block var
-
-      main.main-content
+      +header(page)
+      main
         block content
-
+      +footer()
 

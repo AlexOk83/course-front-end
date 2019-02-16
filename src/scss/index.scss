@@ -1,0 +1,10 @@
+@import "mixins";
+.index {
+  width: 100%;
+  min-height: 100vh;
+}
+.image {
+  @include bg('image.jpg', 10px, center, repeat);
+  width: 300px;
+  height: 300px;
+}
