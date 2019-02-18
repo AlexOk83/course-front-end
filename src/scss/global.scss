@@ -6,3 +6,111 @@
   width: 300px;
   height: 300px;
 }
+.wrapper-bg{
+
+  background-color: #271983;
+  background-image: url("../images/3anatomy.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  min-height: 900px;
+  //mix-blend-mode: overlay;
+  //mix-blend-mode: normal;
+  //opacity: 0.8;
+
+
+}
+.container{
+  width: 1180px;
+  margin: 0 auto;
+}
+.header-main{
+  //background-color: #271983;
+  padding-top: 30px;
+}
+
+.navigation{
+  display: flex;
+  justify-content: flex-start;
+  &__list {
+    display: flex;
+    width: 531px;
+    justify-content: space-between;
+    margin-left: 35px;
+    padding-top: 5px;
+    list-style: none;
+  }
+  &__link{
+    padding-top: 5px;
+    display: inline-block;
+    width: 154px;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  &__logo{
+    font-family: "Catamaran", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 25px;
+    font-size: 22px;
+    color: #FFFFFF;
+  }
+}
+
+.list-nav{
+  &__link{
+    text-decoration: none;
+    font-family: "Catamaran", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 18px;
+    color: #E5E5E5;
+  }
+}
+
+.contacts{
+  margin-left: auto;
+  &__button{
+    font-family: "Catamaran", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+    border: none;
+    background: rgba(255, 214, 74, 0.9);
+    border-radius: 4px;
+    width: 230px;
+    height: 37px;
+    cursor: pointer;
+    transition: all .2s;
+    margin-bottom: 10px;
+    &:hover {
+      background: rgba(255, 222, 109, 0.9);
+      box-shadow: 0 0 80px rgba(255, 214, 74, 0.6);
+      border-radius: 4px;
+    }
+  }
+  &__ipone{
+    font-family: "Catamaran", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+    text-align: right;
+    color: #F5F2F2;
+    position: relative;
+   &::before{
+     content: "";
+     position: absolute;
+     width: 17px;
+     height: 17px;
+     background-image: url("../images/ipone.svg");
+     background-position: 0 0;
+     background-repeat: no-repeat;
+     top: 10px;
+     left: 71px;
+   }
+  }
+}

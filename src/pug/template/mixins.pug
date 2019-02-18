@@ -1,4 +1,12 @@
 include example-code
 
+mixin image(mas)
+	each item, key in mas
+		figure
+			img(src="" + item)
+			figcaption= key
+
+
+
 
 

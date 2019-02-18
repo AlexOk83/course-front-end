@@ -3,18 +3,19 @@ include variable
 include mixins
 
 html(lang="ru")
-    head
-        title learn fornt-end
+	head
+		title Boulder Prolotherapy
 
-        meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0")
-        link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0")
+		link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
+		link(href='https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700', rel='stylesheet')
 
-
-    body
-      block var
-
-      main.main-content
-        block content
+	body
+		block var
+		.wrapper-bg
+			include header
+			main.main-content
+				block content
 
 

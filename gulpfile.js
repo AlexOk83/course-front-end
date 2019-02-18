@@ -9,6 +9,7 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
+  plumber = require('gulp-plumber'),
   reload = browserSync.reload;
 
 gulp.task('browserSync', function () {
@@ -25,6 +26,7 @@ gulp.task('browserSync', function () {
 //less
 gulp.task('less', function () {
     gulp.src('src/less/global.less')
+
         .pipe(less())
         .pipe(autoprefixer('last 15 versions'))
         .pipe(minifyCSS())
@@ -36,6 +38,7 @@ gulp.task('less', function () {
 //scss
 gulp.task('scss', function () {
     gulp.src('src/scss/global.scss')
+        .pipe(plumber())
         .pipe(scss())
         .pipe(autoprefixer('last 15 versions'))
         .pipe(minifyCSS())
@@ -54,6 +57,7 @@ gulp.task('html', function () {
 // pug
 gulp.task('pug', function () {
   gulp.src('src/pug/*.pug')
+      .pipe(plumber())
     .pipe(pug({
       locals: '',
       pretty : true
