@@ -1,6 +1,7 @@
 doctype
 include variable
 include mixins
+include layout_mixins
 
 html(lang="ru")
 	head
@@ -8,14 +9,15 @@ html(lang="ru")
 
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0")
-		link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
+
 		link(href='https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700', rel='stylesheet')
+		link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
 
 	body
 		block var
-		.wrapper-bg
-			include header
-			main.main-content
-				block content
 
+		+header()
+		main
+			block content
+		+footer()
 

@@ -1,6 +1,22 @@
+@import 'breakpoint';
+@import 'mixins';
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font: 16px/20px 'Catamaran', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $padding_container;
+  padding-right: $padding_container;
+  @include breakpoint($tablet_min_media) {
+    max-width: 740px;
+  }
+  @include breakpoint($desktop_media) {
+    max-width: 1220px;
+  }
 }

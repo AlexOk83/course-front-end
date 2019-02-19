@@ -26,8 +26,8 @@ gulp.task('browserSync', function () {
 //less
 gulp.task('less', function () {
     gulp.src('src/less/global.less')
-
         .pipe(less())
+        .pipe(plumber())
         .pipe(autoprefixer('last 15 versions'))
         .pipe(minifyCSS())
         .pipe(rename("style.min.css"))
@@ -57,7 +57,7 @@ gulp.task('html', function () {
 // pug
 gulp.task('pug', function () {
   gulp.src('src/pug/*.pug')
-      .pipe(plumber())
+    .pipe(plumber())
     .pipe(pug({
       locals: '',
       pretty : true
