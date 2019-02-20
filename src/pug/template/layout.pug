@@ -1,21 +1,23 @@
 doctype
 include variable
 include mixins
-include example-code
+include layout_mixins
 
 html(lang="ru")
-    head
-        title learn front-end
+	head
+		title Boulder Prolotherapy
 
-        meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0")
-        link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0")
 
+		link(href='https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700', rel='stylesheet')
+		link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
 
-    body
-      block var
-      +header(page)
-      main
-        block content
-      +footer()
+	body
+		block var
+
+		+header()
+		main
+			block content
+		+footer()
 

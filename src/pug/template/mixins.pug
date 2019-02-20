@@ -1,10 +1,12 @@
 include example-code
 
-mixin header(page)
-  header.header
-    h1= page
+mixin image(mas)
+	each item, key in mas
+		figure
+			img(src="" + item)
+			figcaption= key
 
-mixin footer()
-  footer.footer
+
+
 
 
