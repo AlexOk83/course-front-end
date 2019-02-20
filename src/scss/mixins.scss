@@ -55,7 +55,7 @@
   }
 }
 @mixin width_tablet($count_column) {
-  @media (min-width: $tablet_min_width) and ($tablet_max_width) {
+  @media screen and (min-width: $tablet_min_width) and (max-width: $tablet_max_width) {
     width: $width_column12 * $count_column;
   }
 }
@@ -135,10 +135,10 @@
   width: 100%;
   padding-left: $padding_size;
   padding-right: $padding_size;
-  @include width_desktop($count_desktop);
-  @include width_tablet($count_tablet);
-  @include width_mobile($count_mobile);
   @include width_extra_mobile($count_extra_mobile);
+  @include width_mobile($count_mobile);
+  @include width_tablet($count_tablet);
+  @include width_desktop($count_desktop);
 }
 
 @mixin hide_mobile {
