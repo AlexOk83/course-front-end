@@ -8,9 +8,17 @@
   font: 16px/20px 'Catamaran', sans-serif;
 }
 
+a, span {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
   padding-left: $padding_container;
   padding-right: $padding_container;
   @include breakpoint($tablet_min_media) {

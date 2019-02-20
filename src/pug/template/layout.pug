@@ -15,9 +15,14 @@ html(lang="ru")
 
 	body
 		block var
-
-		+header()
-		main
-			block content
-		+footer()
-
+		if (page == 'index')
+			.main
+				+header(page)
+				main
+					block content
+				+footer()
+		else
+			+header(page)
+			main
+				block content
+			+footer()

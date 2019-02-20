@@ -1,7 +1,21 @@
+mixin header_menu(menu, page)
+	.header__menu
+		each item in menu
+			li.header__menu-item(class={'.header__menu-item--active': page == item.url})
+				a(href= item.url + '.html')= item.title
 mixin header()
-	header.header
+	header.header(class={'.header--main': page == 'index'})
+		.container
+			a.header__logo(href="index.html")= logo
+			+header_menu(menu)
+			.header__contacts
+				.header__contacts-button I Want To Avoid Surgery
+				.header__contacts-phone= phone
 
 
 mixin footer()
 	footer.footer
+
+mixin toggleMenu()
+	.header__toggle-menu
 
