@@ -1,10 +1,43 @@
 jQuery(document).ready(function () {
 
-    // var $ = jQuery, $doc = $(document), $win = $(window);
+    var $ = jQuery, $doc = $(document), $win = $(window);
 
+  var onInitialized = function(e){
+    // сначала выделяем нужный слайд...
+    var current = $($('.header__slider .active img')[0]);
+    var other = $('.header__slider-item');
+    var parent = current.parent();
+    other.removeClass('focus');
+    parent.addClass('focus');
 
+    // меняем фон
+    var slide = current.attr('data-img');
 
+    $('.index__banner__item').removeClass('active');
+    $('#' + slide).addClass('active');
+  };
 
+  $('.header__slider').owlCarousel({
+    loop: true,
+    nav: true,
+    dotsEach: true,
+    autoplay: true,
+    smartSpeed: 1000,
+    navigation: false,
+    navText: [],
+    items:1,
+  });
+
+  $('.eye').click(function () {
+    var p = $(this).parent();
+    $(this).toggleClass('eye--close');
+    if ($(this).hasClass('eye--close')) {
+      $('input', p).attr('type', 'text');
+    } else {
+      $('input', p).attr('type', 'password');
+    }
+
+  });
 });
 
 /*

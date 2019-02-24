@@ -20,3 +20,35 @@
     max-width: 1200px;
   }
 }
+
+
+.owl-stage-outer {
+  width: 100%;
+  overflow: hidden;
+  z-index: 5;
+  position: relative;
+}
+.owl-stage {
+  display: flex;
+}
+.owl-item {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.owl-nav {
+
+}
+.owl-dots {
+  &.disabled {
+    display: none;
+  }
+
+
+}
+.owl-dot {
+  cursor: pointer;
+  &.active {
+
+  }
+}
