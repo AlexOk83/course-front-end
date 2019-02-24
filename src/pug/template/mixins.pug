@@ -38,14 +38,14 @@ mixin slider_item(item)
 
 
 mixin photo(item)
-	.photos__wrapper
+	.photos__wrapper.parallax(class= item.classes)
 		.photos__item
 			img.photos__image(src= 'images/lending/' + item.image, alt='')
 			p.photos__text= item.text
 
 mixin programm(item)
 	.programm
-		.programm__image: img(src= 'images/lending/' + item.image, alt= item.title)
+		.programm__image.parallax(class= item.classes): img(src= 'images/lending/' + item.image, alt= item.title)
 		.programm__text
 			h2.programm__title= item.title
 			p.programm__desc= item.desc
