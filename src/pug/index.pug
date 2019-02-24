@@ -3,14 +3,21 @@ block var
 
 block content
 	+header()
+	.grey__section.grey__section--bottom-radius
+		.container
+			h2.h2= h2[0]
+			h3.h3
+				P= h3[0]
+				P= h3[1]
+			.photos__row
+				each item in photos
+					+photo(item)
 	.container
-		h2.h2= h2[0]
-		h3.h3
-			P= h3[0]
-			P= h3[1]
-		.photos__row
-			each item in photos
-				+photo(item)
+		each item in programm
+			.programm
+
+
+
 
 
 
