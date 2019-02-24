@@ -3,12 +3,12 @@ include example-code
 mixin header()
 	header.header
 		.container
-			a.header__lang(href='#') rus
+			a.header__lang(href='') rus
 			.header__logo
 		.header__slider
 			each item in slider
 				+slider_item(item)
-		.header__arrow-down
+		a.header__arrow-down(href='#photos')
 
 mixin footer()
 	footer.footer
