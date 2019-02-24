@@ -10,6 +10,21 @@ mixin header()
 				+slider_item(item)
 		.header__arrow-down
 
+mixin footer()
+	footer.footer
+		.container
+			.footer__cont
+				.footer__logo
+				nav.footer__menu
+					each item in footer_menu
+						li.footer__menu-item
+							a(href='##')= item
+				p.footer__info Наш сайт использует куки, нажимая зарегистрироваться
+					| вы соглашаетесь с <a href='#'>политикой использования cookie</a>
+				p.footer__info Все фотографии моделей, использованные на сайте несут
+					|  исключительно иллюстративный зарактер.
+					| <br> Любые совпадения с реальными людьми и являются случайностью.
+
 mixin slider_item(item)
 	.header__slider-item(data-bg= 'images/lending/' + item.bg)
 		.container
@@ -27,3 +42,38 @@ mixin photo(item)
 		.photos__item
 			img.photos__image(src= 'images/lending/' + item.image, alt='')
 			p.photos__text= item.text
+
+mixin programm(item)
+	.programm
+		.programm__image: img(src= 'images/lending/' + item.image, alt= item.title)
+		.programm__text
+			h2.programm__title= item.title
+			p.programm__desc= item.desc
+mixin form()
+	form.form
+		+input('Как вас зовут?')
+		+input('Ваш e-mail:')
+		+password('Придумайте пароль:')
+		+checkbox('age-true', 'Подтверждаю, что мне есть 18 лет')
+		+checkbox_igree()
+		+button('Стать моделью!')
+mixin input(text, name)
+	.form__input
+		input(type='text', placeholder= text, name= name, autocomplete='off')
+mixin password(text, name)
+	.form__input.form__input--password
+		input(type='text', placeholder= text, name= name)
+		.eye
+mixin checkbox(id, text)
+	.form__checkbox
+		input(type='checkbox', id= id, name= id)
+		label(for= id)= text
+
+mixin checkbox_igree()
+	.form__checkbox
+		input(type='checkbox', id='igree', name='igree')
+		label.small(for='igree') Согласен с	<a href='#'>политикой конфиденциальности</a> и <a href='#'>политикой обработки персональных данных</a>
+
+mixin button(text)
+	button.form__button(type='submit')= text
+

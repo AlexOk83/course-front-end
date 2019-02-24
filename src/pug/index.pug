@@ -14,10 +14,15 @@ block content
 					+photo(item)
 	.container
 		each item in programm
-			.programm
-
-
-
+			+programm(item)
+	.grey__section.grey__section--top-radius
+		.container
+			h2.h2= h2[1]
+			h3.h3
+				P= h3[2]
+				P= h3[3]
+			+form()
+	+footer()
 
 
 
