@@ -1,12 +1,29 @@
 include example-code
 
-mixin image(mas)
-	each item, key in mas
-		figure
-			img(src="" + item)
-			figcaption= key
+mixin header()
+	header.header
+		.container
+			a.header__lang(href='#') rus
+			.header__logo
+		.header__slider
+			each item in slider
+				+slider_item(item)
+		.header__arrow-down
+
+mixin slider_item(item)
+	.header__slider-item(data-bg= 'images/lending/' + item.bg)
+		.container
+			.header__slider-left
+				h1.header__slider-title= item.title
+				h2.header__slider-desc
+					each text in item.desc
+						p= text
+				.header__slider-button= item.btn_text
+			.header__slider-image: img(src='images/lending/' + item.image)
 
 
-
-
-
+mixin photo(item)
+	.photos__wrapper
+		.photos__item
+			img.photos__image(src= 'images/lending/' + item.image, alt='')
+			p.photos__text= item.text

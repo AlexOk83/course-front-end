@@ -2,7 +2,15 @@ extends template/layout
 block var
 
 block content
-
+	+header()
+	.container
+		h2.h2= h2[0]
+		h3.h3
+			P= h3[0]
+			P= h3[1]
+		.photos__row
+			each item in photos
+				+photo(item)
 
 
 
