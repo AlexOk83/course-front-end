@@ -51,27 +51,25 @@ mixin programm(item)
 			p.programm__desc= item.desc
 mixin form()
 	form.form
-		+input('Как вас зовут?')
-		+input('Ваш e-mail:')
-		+password('Придумайте пароль:')
+		+input('text', 'Как вас зовут?', 'name')
+		+input('email', 'Ваш e-mail:', 'email')
+		+input('password', 'Придумайте пароль:', 'pass')
 		+checkbox('age-true', 'Подтверждаю, что мне есть 18 лет')
 		+checkbox_igree()
 		+button('Стать моделью!')
-mixin input(text, name)
+mixin input(type, text, name1)
 	.form__input
-		input(type='text', placeholder= text, name= name, autocomplete='off')
-mixin password(text, name)
-	.form__input.form__input--password
-		input(type='password', placeholder= text, name= name)
-		.eye
+		input(type= type, placeholder= text, name= name1, autocomplete='off', required)
+		if (type == 'password')
+			.eye
 mixin checkbox(id, text)
 	.form__checkbox
-		input(type='checkbox', id= id, name= id)
+		input(type='checkbox', id= id, name= id, required)
 		label(for= id)= text
 
 mixin checkbox_igree()
 	.form__checkbox
-		input(type='checkbox', id='igree', name='igree')
+		input(type='checkbox', id='igree', name='igree', required)
 		label.small(for='igree') Согласен с	<a href='#'>политикой конфиденциальности</a> и <a href='#'>политикой обработки персональных данных</a>
 
 mixin button(text)

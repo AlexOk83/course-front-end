@@ -110,21 +110,21 @@
         </h3>
         <form class="form">
           <div class="form__input">
-            <input type="text" placeholder="Как вас зовут?" autocomplete="off">
+            <input type="text" placeholder="Как вас зовут?" name="name" autocomplete="off" required>
           </div>
           <div class="form__input">
-            <input type="text" placeholder="Ваш e-mail:" autocomplete="off">
+            <input type="email" placeholder="Ваш e-mail:" name="email" autocomplete="off" required>
           </div>
-          <div class="form__input form__input--password">
-            <input type="password" placeholder="Придумайте пароль:">
+          <div class="form__input">
+            <input type="password" placeholder="Придумайте пароль:" name="pass" autocomplete="off" required>
             <div class="eye"></div>
           </div>
           <div class="form__checkbox">
-            <input type="checkbox" id="age-true" name="age-true">
+            <input type="checkbox" id="age-true" name="age-true" required>
             <label for="age-true">Подтверждаю, что мне есть 18 лет</label>
           </div>
           <div class="form__checkbox">
-            <input type="checkbox" id="igree" name="igree">
+            <input type="checkbox" id="igree" name="igree" required>
             <label class="small" for="igree">Согласен с	<a href='#'>политикой конфиденциальности</a> и <a href='#'>политикой обработки персональных данных</a></label>
           </div>
           <button class="form__button" type="submit">Стать моделью!</button>
