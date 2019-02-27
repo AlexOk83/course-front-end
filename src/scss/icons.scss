@@ -1,0 +1,48 @@
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?l5jhc0');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?l5jhc0#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?l5jhc0') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?l5jhc0') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?l5jhc0##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon--google {
+  &:before {
+    content: $icon-google; 
+  }
+}
+.icon--linkdIn {
+  &:before {
+    content: $icon-linkdIn; 
+  }
+}
+.icon--twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+

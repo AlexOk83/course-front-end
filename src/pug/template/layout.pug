@@ -18,6 +18,7 @@ html(lang="ru")
 		if (page == 'index')
 			.main
 				+header(page)
+				+device_menu(page)
 				main
 					block content
 				+footer()
@@ -26,3 +27,5 @@ html(lang="ru")
 			main
 				block content
 			+footer()
+		script(src='js/jquery.min.js')
+		script(src='js/main.js')
