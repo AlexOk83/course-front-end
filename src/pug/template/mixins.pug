@@ -1,11 +1,21 @@
 include example-code
 
-mixin image(mas)
-	each item, key in mas
-		figure
-			img(src="" + item)
-			figcaption= key
+mixin treatments_list(list)
+	.container
+		h2.h2 Treatments
+		h3.h3 At Boulder Prolotherapy, we offer a variety of treatment options, depending on your
+			| specific needs. To learn more, click on the name of each treatment below.
+		.treatments__row
+			each item in list
+				+treatments_item(item)
 
+mixin treatments_item(item)
+	.treatments__wrapper
+		.treatments__item
+			.treatments__item-image: img(src= item.image, alt= item.title)
+			.treatments__item-cont
+				.treatments__item-title: a(href= item.url)= item.title
+				.treatments__item-description= item.description
 
 
 

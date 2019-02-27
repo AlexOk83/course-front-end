@@ -2,7 +2,7 @@ mixin menu(menu, page, parent_class)
 	- var class1 = parent_class + '__menu'
 	div(class= class1)
 		each item in menu
-			li(class = class1 + '-item', class= {'header__menu-item--active': page == item.url})
+			li(class = class1 + '-item', class= {class1}-item--active": page == item.url})
 				a(href= item.url + '.html')= item.title
 mixin header(page)
 	header.header(class={'.header--main': page == 'index'})
@@ -35,4 +35,6 @@ mixin social_icons()
 		a.icon.icon--google(href='#')
 		a.icon.icon--facebook(href='#')
 		a.icon.icon--twitter(href='#')
+
+
 
