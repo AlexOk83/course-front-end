@@ -146,6 +146,10 @@
   @include width_mobile($count_mobile);
   @include width_tablet($count_tablet);
   @include width_desktop($count_desktop);
+  @media (max-width: $extra_mobile_width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @mixin hide_mobile {
