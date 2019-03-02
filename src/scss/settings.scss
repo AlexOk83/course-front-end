@@ -6,9 +6,6 @@
   margin: 0;
   padding: 0;
   font: 16px/20px 'Catamaran', sans-serif;
-  @include breakpoint($extra_desktop_media) {
-    font-size: 32px;
-  }
 }
 
 a, span {

@@ -1,4 +1,4 @@
-
+@import "vars";
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?l5jhc0');
@@ -27,22 +27,22 @@
 
 .icon--facebook {
   &:before {
-    content: $icon-facebook; 
+    content: $icon-facebook;
   }
 }
 .icon--google {
   &:before {
-    content: $icon-google; 
+    content: $icon-google;
   }
 }
 .icon--linkdIn {
   &:before {
-    content: $icon-linkdIn; 
+    content: $icon-linkdIn;
   }
 }
 .icon--twitter {
   &:before {
-    content: $icon-twitter; 
+    content: $icon-twitter;
   }
 }
 
