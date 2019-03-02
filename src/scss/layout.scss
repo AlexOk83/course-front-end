@@ -1,6 +1,18 @@
 @import 'breakpoint';
 @import 'mixins';
 
+%button {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  background-color: $yellow;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 13px;
+}
+
+
 .main {
   width: 100%;
   min-height: 100vh;
@@ -19,6 +31,7 @@
 .header {
   padding-top: 34px;
   position: relative;
+  z-index: 300;
   &:before {
     content: '';
     width: 100%;
@@ -27,7 +40,7 @@
     top: 0;
     left: 0;
     background-color: $bgHeader;
-
+    @include hide_device();
   }
   .container {
     display: flex;
@@ -66,14 +79,7 @@
     @include hide_device();
   }
   &__contacts-button {
-    width: 100%;
-    height: 30px;
-    border-radius: 4px;
-    background-color: $yellow;
-    color: black;
-    text-align: center;
-    line-height: 30px;
-    margin-bottom: 13px;
+    @extend %button;
   }
   &__contacts-phone {
     width: 100%;
@@ -152,6 +158,53 @@
     transition: all 0.1s ease-out;
   }
 }
+
+.device-toggle-content {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+
+  background-color: $blue;
+  z-index: 100;
+  @include hide_desktop();
+  transition: all 0.5s ease-out;
+
+  .container {
+    margin-top: 116px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: calc(100% - 116px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  &__menu {
+    padding-bottom: 25px;
+    width: 100px;
+  }
+  &__menu-item {
+    font-weight: bold;
+    line-height: 25px;
+    display: block;
+    margin-bottom: 15px;
+    color: $yellow;
+
+  }
+  .social-icons {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  &__button {
+    @extend %button;
+  }
+  &.active {
+    right: 0;
+  }
+}
+
+
+
 
 .social-icons {
   .icon {

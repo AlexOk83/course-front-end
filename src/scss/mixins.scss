@@ -14,6 +14,13 @@
   }
 }
 
+@mixin animate($name, $duration: 1s, $delay: 0s) {
+  animation-name: $name;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-fill-mode: forwards;
+}
+
 @mixin bg($img, $size: cover, $pos: center, $repeat: no-repeat) {
   background-size: $size;
   background-position: $pos;
