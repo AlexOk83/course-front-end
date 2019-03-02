@@ -6,8 +6,9 @@ mixin treatments_list(list)
 		h3.h3 At Boulder Prolotherapy, we offer a variety of treatment options, depending on your
 			| specific needs. To learn more, click on the name of each treatment below.
 		.treatments__row
-			each item in list
-				+treatments_item(item)
+			.treatments__row2
+				each item in list
+					+treatments_item(item)
 
 mixin treatments_item(item)
 	.treatments__wrapper
