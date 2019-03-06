@@ -80,7 +80,7 @@
     min-width: 230px;
     @include hide_device();
   }
-  &__contacts-button {
+  .header__contacts-button {
     @extend %button;
   }
   &__contacts-phone {
