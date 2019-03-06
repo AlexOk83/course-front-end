@@ -28,3 +28,8 @@ a, span {
     max-width: 1220 * $rem;
   }
 }
+
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}

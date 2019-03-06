@@ -12,7 +12,6 @@
   margin-bottom: 13px;
 }
 
-
 .main {
   width: 100%;
   min-height: 100vh;
@@ -168,12 +167,21 @@
   height: 100vh;
   top: 0;
   right: -100vw;
-
-  background-color: $blue;
   z-index: 100;
   @include hide_desktop();
-  transition: all 0.5s ease-out;
-
+  &:before {
+    content: '';
+    display: block;
+    width: 300vh;
+    height: 300vh;
+    background-color: $blue;
+    position: absolute;
+    top: calc(-150vh + 30px);
+    right: calc(-150vh + 19px);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 1s ease-out;
+  }
   .container {
     margin-top: 116px;
     padding-left: 50px;
@@ -181,6 +189,7 @@
     height: calc(100% - 116px);
     overflow-x: hidden;
     overflow-y: auto;
+    opacity: 0;
   }
   &__menu {
     padding-bottom: 25px;
@@ -203,7 +212,22 @@
   }
   &.active {
     right: 0;
+    &:before {
+      transform: scale(1);
+    }
+    .container {
+      @include animate(menu, 0.5s, 0.5s);
+    }
   }
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
 }
 
 .social-icons {
