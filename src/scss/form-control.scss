@@ -1,0 +1,206 @@
+.input__wrapper {
+  @include column(0, 4, 6);
+  margin: 100px auto;
+  background-color: $blue;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(black, 0.4);
+}
+%inputText {
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  color: white;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+  &::placeholder {
+    color: rgba(white, 0.8);
+  }
+}
+.form-control {
+  width: 100%;
+  margin-bottom: 20px;
+  .label {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    width: 100%;
+    display: block;
+    color: white;
+  }
+  &__input {
+    height: 40px;
+    border-bottom: 1px solid rgba(white, 0.3);
+    @extend %inputText;
+    &:focus {
+      border-bottom: 1px solid rgba(white, 0.9);
+    }
+  }
+  &__textarea {
+    border-bottom: 1px solid rgba(white, 0.3);
+
+    height: 118px;
+    resize: none;
+    width: 100%;
+    line-height: 27px;
+    @extend %inputText;
+    &:focus {
+      border-bottom: 1px solid rgba(white, 0.9);
+    }
+  }
+  &__checkbox {
+    display: none;
+    &+ label {
+      @extend %inputText;
+      padding-left: 40px;
+      position: relative;
+      cursor: pointer;
+      opacity: 0.3;
+      transition: all 0.5s ease-out;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid white;
+        transition: all 0.3s ease-out;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -3px;
+        left: 6px;
+        width: 8px;
+        height: 13px;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        transform: rotate(45deg) scale(0);
+        transition: all 0.3s ease-out;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    &:checked {
+      &+label {
+        opacity: 0.9;
+        &:after {
+          transform: rotate(45deg) scale(1);
+        }
+      }
+    }
+  }
+  &__radio {
+    display: none;
+    &+ label {
+      @extend %inputText;
+      padding-left: 40px;
+      position: relative;
+      cursor: pointer;
+      opacity: 0.3;
+      transition: all 0.5s ease-out;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid rgba(white, 0.3);
+        transition: all 0.3s ease-out;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.3s ease-out;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    &:checked {
+      &+label {
+        opacity: 0.9;
+        &:after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &__button {
+    background-color: $yellow;
+    text-align: center;
+    line-height: 55px;
+    height: 50px;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 4px;
+    border: 0;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 0 rgba(255, 214, 74, 0.6);
+    &:hover {
+      background-color: $yellowHover;
+      box-shadow: 0 0 80px rgba(255, 214, 74, 0.6);
+    }
+    &:active {
+      background-color: $yellowActive;
+      box-shadow: 0 0 80px rgba(255, 214, 74, 0.6);
+    }
+    &--centered {
+      margin: 0 auto;
+    }
+    &--small {
+      line-height: 37px;
+      height: 37px;
+    }
+    &--orange {
+      background-color: $orange;
+      box-shadow: 0 0 0 rgba(255, 86, 62, 0.8);
+      color: white;
+      &:hover {
+        background-color: $orangeHover;
+        box-shadow: 0 0 80px rgba(255, 86, 62, 0.8);
+      }
+      &:active {
+        background-color: $orangeActive;
+        box-shadow: 0 0 80px rgba(255, 86, 62, 0.8);
+
+      }
+    }
+  }
+  &--error {
+    .form-control__input,
+    .form-control__textarea {
+      color: $orange;
+      border-bottom: 1px solid $orange;
+      &::placeholder {
+        color: $orange;
+      }
+    }
+
+
+
+  }
+}

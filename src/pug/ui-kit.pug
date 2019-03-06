@@ -1,0 +1,16 @@
+extends template/layout
+block var
+	- var page = ''
+block content
+	.container
+		.input__wrapper
+			form.form
+				+input('text', 'Фамилия', 'firstName', 'error')
+				+input('text', 'Имя', 'secondName')
+				+input('text', 'Отчество', 'lastName')
+				+input('textarea', 'Примечание', 'description')
+
+				+radio('Мужской', 'sex', 'male')
+				+radio('Женский', 'sex', 'female')
+				+checkbox('Согласен на обработку данных', 'igree', id='igree')
+				+button('submit', 'Отправить', 'orange')

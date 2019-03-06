@@ -12,7 +12,7 @@
     <header class="header">
       <div class="container"><a class="header__logo" href="index.html">Boulder Prolotherapy</a>
         <div class="header__menu">
-          <li class="header__menu-item header__menu-item--active"><a href="about.html">About Us</a></li>
+          <li class="header__menu-item"><a href="about.html">About Us</a></li>
           <li class="header__menu-item"><a href="symptoms.html">Symptoms</a></li>
           <li class="header__menu-item"><a href="diagnosis.html">Diagnosis</a></li>
           <li class="header__menu-item"><a href="treatments.html">Treatments</a></li>
@@ -32,7 +32,7 @@
     <div class="device-toggle-content">
       <div class="container">
         <div class="device-toggle-content__menu">
-          <li class="device-toggle-content__menu-item device-toggle-content__menu-item--active"><a href="about.html">About Us</a></li>
+          <li class="device-toggle-content__menu-item"><a href="about.html">About Us</a></li>
           <li class="device-toggle-content__menu-item"><a href="symptoms.html">Symptoms</a></li>
           <li class="device-toggle-content__menu-item"><a href="diagnosis.html">Diagnosis</a></li>
           <li class="device-toggle-content__menu-item"><a href="treatments.html">Treatments</a></li>
@@ -44,7 +44,37 @@
       </div>
     </div>
     <main>
-      <div class="container"></div>
+      <div class="container">
+        <div class="input__wrapper">
+          <form class="form">
+            <div class="form-control form-control--error">
+              <input class="form-control__input" type="text" placeholder="Фамилия" name="firstName" autocomplete="off">
+            </div>
+            <div class="form-control form-control--undefined">
+              <input class="form-control__input" type="text" placeholder="Имя" name="secondName" autocomplete="off">
+            </div>
+            <div class="form-control form-control--undefined">
+              <input class="form-control__input" type="text" placeholder="Отчество" name="lastName" autocomplete="off">
+            </div>
+            <div class="form-control form-control--undefined">
+              <textarea class="form-control__textarea" placeholder="Примечание" name="description"></textarea>
+            </div>
+            <div class="form-control">
+              <input class="form-control__radio" type="radio" id="male" name="sex" value="male">
+              <label for="male">Мужской</label>
+            </div>
+            <div class="form-control">
+              <input class="form-control__radio" type="radio" id="female" name="sex" value="female">
+              <label for="female">Женский</label>
+            </div>
+            <div class="form-control">
+              <input class="form-control__checkbox" type="checkbox" id="igree" name="igree">
+              <label for="igree">Согласен на обработку данных</label>
+            </div>
+            <button class="form-control__button form-control__button--orange" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer"></footer>
     <script src="js/jquery.min.js"></script>
