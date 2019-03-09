@@ -47,17 +47,30 @@
       <div class="container">
         <div class="input__wrapper">
           <form class="form">
-            <div class="form-control form-control--error">
-              <input class="form-control__input" type="text" placeholder="Фамилия" name="firstName" autocomplete="off">
+            <div class="form-control form-control--undefined">
+              <input class="form-control__input" type="text" placeholder="Фамилия" name="firstName" autocomplete="off" data-required="true">
             </div>
             <div class="form-control form-control--undefined">
-              <input class="form-control__input" type="text" placeholder="Имя" name="secondName" autocomplete="off">
+              <input class="form-control__input" type="text" placeholder="Имя" name="secondName" autocomplete="off" data-required="true">
             </div>
             <div class="form-control form-control--undefined">
-              <input class="form-control__input" type="text" placeholder="Отчество" name="lastName" autocomplete="off">
+              <input class="form-control__input" type="text" placeholder="Отчество" name="lastName" autocomplete="off" data-required="true">
+            </div>
+            <div class="form-control form-control--undefined">
+              <input class="form-control__input" type="email" placeholder="Ваш Е-mail" name="email" autocomplete="off" data-required="true">
+            </div>
+            <div class="form-control form-control--undefined">
+              <input class="form-control__input" type="tel" placeholder="Ваш телефон" name="phone" autocomplete="off" data-required="true">
             </div>
             <div class="form-control form-control--undefined">
               <textarea class="form-control__textarea" placeholder="Примечание" name="description"></textarea>
+            </div>
+            <div class="form-control">
+              <select class="form-control__select" name="age" value="до 18 лет">
+                <option value="до 14 лет">до 14 лет</option>
+                <option value="до 18 лет">до 18 лет</option>
+                <option value="старше 18 лет">старше 18 лет</option>
+              </select>
             </div>
             <div class="form-control">
               <input class="form-control__radio" type="radio" id="male" name="sex" value="male">
@@ -68,7 +81,7 @@
               <label for="female">Женский</label>
             </div>
             <div class="form-control">
-              <input class="form-control__checkbox" type="checkbox" id="igree" name="igree">
+              <input class="form-control__checkbox" type="checkbox" id="igree" name="igree" data-required="true">
               <label for="igree">Согласен на обработку данных</label>
             </div>
             <button class="form-control__button form-control__button--orange" type="submit">Отправить</button>

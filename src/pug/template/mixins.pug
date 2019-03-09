@@ -18,22 +18,28 @@ mixin treatments_item(item)
 				.treatments__item-description= item.description
 
 // form-control
-mixin input(type, label, name, classModify)
+mixin input(type, label, name, required, classModify)
 	.form-control(class='form-control--' + classModify)
 		if (type == 'textarea')
-			textarea.form-control__textarea(placeholder= label, name= name)
+			textarea.form-control__textarea(placeholder= label, name= name, data-required= required)
 		else
-			input.form-control__input(type= type, placeholder= label, name= name, autocomplete="off")
+			input.form-control__input(type= type, placeholder= label, name= name, autocomplete="off", data-required= required)
 
-mixin checkbox(label, name, id)
+mixin checkbox(label, name, id, required)
 	.form-control
-		input.form-control__checkbox(type='checkbox', id= id, name= name)
+		input.form-control__checkbox(type='checkbox', id= id, name= name, data-required= required)
 		label(for= id)= label
 
-mixin radio(label, name, id)
+mixin radio(label, name, id, required)
 	.form-control
-		input.form-control__radio(type='radio', id= id, name= name, value= id)
+		input.form-control__radio(type='radio', id= id, name= name, value= id, data-required= required)
 		label(for= id)= label
+
+mixin select(list_options, value, name, required)
+	.form-control
+		select.form-control__select(name= name, value= value, data-required= required)
+			each item in list_options
+				option(value= item.value)= item.title
 
 mixin button(type, label, classModify)
 	button.form-control__button(class= 'form-control__button--' +classModify, type= type)= label

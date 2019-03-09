@@ -5,12 +5,15 @@ block content
 	.container
 		.input__wrapper
 			form.form
-				+input('text', 'Фамилия', 'firstName', 'error')
-				+input('text', 'Имя', 'secondName')
-				+input('text', 'Отчество', 'lastName')
+				+input('text', 'Фамилия', 'firstName', 'true')
+				+input('text', 'Имя', 'secondName', 'true')
+				+input('text', 'Отчество', 'lastName', 'true')
+				+input('email', 'Ваш Е-mail', 'email', 'true')
+				+input('tel', 'Ваш телефон', 'phone', 'true')
 				+input('textarea', 'Примечание', 'description')
+				+select(age, 'до 18 лет', 'age')
 
 				+radio('Мужской', 'sex', 'male')
 				+radio('Женский', 'sex', 'female')
-				+checkbox('Согласен на обработку данных', 'igree', id='igree')
+				+checkbox('Согласен на обработку данных', 'igree', id='igree', 'true')
 				+button('submit', 'Отправить', 'orange')
