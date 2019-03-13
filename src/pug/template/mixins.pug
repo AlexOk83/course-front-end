@@ -17,6 +17,27 @@ mixin treatments_item(item)
 				.treatments__item-title: a(href= item.url)= item.title
 				.treatments__item-description= item.description
 
+mixin pain(pain_list)
+	.pain
+		.pain__map
+		.pain__list
+			.left
+				each item, index in pain_list
+					if (index < 6)
+						+pain_item(item, index)
+			.pain__button-more.form-control__button.form-control__button--orange View More Symptoms
+			.right
+				each item, index in pain_list
+					if (index >= 6)
+						+pain_item(item, index)
+
+mixin pain_item(item, index)
+	a.pain__item(
+		href= item.link,
+		data-x-pos= item.coordinates.x,
+		data-y-pos= item.coordinates.y,
+		id= index )= item.title
+
 // form-control
 mixin input(type, label, name, required, classModify)
 	.form-control(class='form-control--' + classModify)

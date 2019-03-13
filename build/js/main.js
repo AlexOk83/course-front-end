@@ -292,6 +292,45 @@ jQuery(document).ready(function () {
 
     });
     */
+    var map = $('.pain__map');
+
+    $('.pain__item').each(function() {
+       var $this = $(this),
+           x = $(this).attr('data-x-pos'),
+           y = $(this).attr('data-y-pos'),
+           index = $(this).attr('id'),
+           point = $('<div>')
+               .addClass('pain__point')
+               .css({
+                top: y + 'px',
+                left: x + 'px',
+            })
+               .attr({
+                    id: 'point' + index,
+                })
+               .mouseout(function () {
+                    $('#' + index).removeClass('active');
+                })
+               .mouseover(function() {
+                    $('#' + index).addClass('active');
+                });
+
+            map.append(point);
+
+        $this
+            .mouseout(function () {
+                $('#point' + index).removeClass('active');
+            })
+            .mouseover(function() {
+                $('#point' + index).addClass('active');
+            });
+
+    });
+
+    $('.pain__button-more').click(function () {
+        $(this).addClass('activated');
+        $('.right').addClass('active');
+    });
 
     var funcAjax = (function(data, f) {
         $.ajax({
