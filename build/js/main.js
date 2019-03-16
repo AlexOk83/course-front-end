@@ -346,7 +346,95 @@ jQuery(document).ready(function () {
             });
     });
 
+    var stringToDate = function(line) {
+        var sDate = line;
+        sDate = sDate.replace(/\-/g, "/");
+        sDate = sDate.replace(/(\d{1,2})[\/-\\.](\d{1,2})[\/-\\.](\d{4})\s(\d{2}):(\d{2}):(\d{2})/, "$3/$2/$1 $4:$5:$6");
+        return new Date(sDate);
+    };
 
+    var dateParse = function(date) {
+        var minute = date.getMinutes(),
+            hour = date.getHours(),
+            fullDate,
+            day = date.getDate(),
+            dayWeek = date.getDay(),
+            month = date.getMonth(),
+            year = date.getFullYear(),
+            monthArray=["января", "февраля", "марта", "апреля", "мая", "июня","июля", "августа", "сентября", "октября", "ноября", "декабря"],
+            daysWeek=["Воскресенье", "Понедельник", "Вторник", "Среда","Четверг", "Пятница", "Суббота"];
+
+        month = monthArray[month];
+        fullDate = day + " " + month + " " + year;
+        dayWeek = daysWeek[dayWeek];
+
+
+        return {
+            minute : minute,
+            hour : hour,
+            fullDate : fullDate,
+            day : day,
+            dayWeek : dayWeek,
+            month : month,
+            year : year,
+        }
+    };
+
+    var newDate = stringToDate("8-12-2018");
+
+    console.log(dateParse(newDate));
+
+    var people = [
+        {
+            name: 'Иван',
+            age: 30
+        },
+        {
+            name: 'Иван2',
+            age: 12
+        },
+        {
+            name: 'Иван3',
+            age: 45
+        },
+        {
+            name: 'Иван4',
+            age: 5
+        },
+        {
+            name: 'Иван5',
+            age: 24
+        },
+        {
+            name: 'Иван6',
+            age: 65
+        },
+        {
+            name: 'Иван7',
+            age: 12
+        },
+        {
+            name: 'Иван8',
+            age: 8
+        },
+
+    ];
+    function compareNumeric(a, b) {
+        if (a.age > b.age) return 1;
+        if (a.age < b.age) return -1;
+    }
+    var peopleSort = [...people].sort(compareNumeric);
+
+    console.log("Без сортировки", people);
+    console.log("С сортировкой", peopleSort);
+
+    var arr = [ 1, 2, 15 ];
+    var people3 = people;
+    peopleSort.forEach(function(item) {
+        people3 = people3.concat(item);
+    });
+
+    console.log("оба", people3);
 
 
 });
