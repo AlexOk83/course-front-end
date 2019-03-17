@@ -21,10 +21,25 @@
     position: absolute;
     left: 50%;
     margin-left: -301px;
-    background: url('../images/pain/01/shutterstock_179706365@2x.png'), url('../images/pain/01/23@2x.png');
-    background-blend-mode: soft-light;
-    background-size: contain, contain;
-    background-repeat: no-repeat, no-repeat;
+    @include bg('/pain/232@2x.png');
+
+    &:before {
+      content: '';
+      display: block;
+      width: 538px;
+      height: 538px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -269px;
+      margin-left: -269px;
+      z-index: -1;
+      background: radial-gradient(269.00px at 50% 50%, #087CD5 0%, #1053AD 100%);
+      opacity: 0.8;
+      box-shadow: 0 0 120px rgba(118, 216, 251, 0.15);
+
+    }
   }
   &__list {
     display: flex;

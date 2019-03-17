@@ -23,12 +23,12 @@ mixin pain(pain_list)
 		.pain__list
 			.left
 				each item, index in pain_list
-					if (index < 6)
+					if (index < 5)
 						+pain_item(item, index)
 			.pain__button-more.form-control__button.form-control__button--orange View More Symptoms
 			.right
 				each item, index in pain_list
-					if (index >= 6)
+					if (index >= 5)
 						+pain_item(item, index)
 
 mixin pain_item(item, index)

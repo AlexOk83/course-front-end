@@ -1,2 +1,91 @@
 @import 'breakpoint';
 @import 'mixins';
+
+%icon-before {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 155px;
+  height: 155px;
+}
+
+.advantages {
+  margin-top: 85px;
+  color: $white;
+  &__header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__header {
+    width: 780px;
+    margin-bottom: 2px;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 57px;
+    padding-right: 112px;
+  }
+  &__header-description {
+    width: 780px;
+    margin-bottom: 25px;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: normal;
+  }
+  &__button-appointment {
+    margin-right: 500px;
+    margin-bottom: 70px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  &__description {
+    width: 580px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  &__list {
+    display: flex;
+    margin-top: 185px;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 280px;
+    &:nth-child(1)::before {
+      @extend %icon-before;
+      @include bg('../images/union_1.png')
+    }
+    &:nth-child(2)::before {
+      @extend %icon-before;
+      @include bg('../images/union_2.png')
+    }
+    &:nth-child(3)::before {
+      @extend %icon-before;
+      @include bg('../images/union_3.png')
+    }
+    &:nth-child(4)::before {
+      @extend %icon-before;
+      @include bg('../images/union_4.png')
+    }
+  }
+  &__item-header {
+    margin-top: -25px;
+    padding: 0 65px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    opacity: 0.9;
+  }
+  &__item-description {
+    width: 240px;
+    margin: 10px auto;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
