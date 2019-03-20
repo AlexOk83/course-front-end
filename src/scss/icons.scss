@@ -24,7 +24,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-star {
+  &:before {
+    content: $icon-star;
+  }
+}
 .icon--facebook {
   &:before {
     content: $icon-facebook;
