@@ -193,19 +193,19 @@
   font-size: 40px;
 }
 
-
-@mixin center($width, $height) {
+%center_start {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -($width / 2);
-  margin-top: -($height / 2);
-
 }
 
 %center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  @extend %center_start;
   transform: translate(-50%, -50%);
+}
+@mixin center($width, $height) {
+  @extend %center_start;
+  margin-left: -($width / 2);
+  margin-top: -($height / 2);
+
 }
