@@ -66,6 +66,7 @@ mixin button(type, label, classModify)
 	button.form-control__button(class= 'form-control__button--' +classModify, type= type)= label
 
 mixin slider(data)
+	h2.h2 Testimonials
 	.slider
 		each item in data
 			+slider_item(item)
@@ -73,8 +74,13 @@ mixin slider(data)
 mixin slider_item(item)
 	.slider__item
 		.slider__item-title= item.title
-		.slider__item-subtitle= item.subtitle
-		.slider__item-rating(class="slider__item-rating--" + item.rating)
-			-for(var i= 0; i<5; i++)
-				span.icon.icon-star
+		.slider__item-subtitle= item.subTitle
+		+rating(item.rating)
 		.slider__item-text= item.text
+		if (item.more)
+			a.slider__item-more-link(href= item.more) View More
+
+mixin rating(rating)
+	.rating-star(class= "rating-star--" + rating)
+		-for(var i= 0; i<5; i++)
+			span.icon.icon-star

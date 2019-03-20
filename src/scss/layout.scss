@@ -15,7 +15,9 @@
 .main {
   width: 100%;
   min-height: 100vh;
+
   background-color: $bgHeader;
+  /*
   background-image:
     url('../images/main-bg.svg'),
     url('../images/main%20man/3anatomy_2@2x.png'),
@@ -32,7 +34,7 @@
     auto,
     77%,
     100% 1000px;
-  position: relative;
+  position: relative;*/
   .header {
     &:before {
       display: none;
