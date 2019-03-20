@@ -1,0 +1,113 @@
+
+@mixin star($op1: 1.0,$op2: 1.0,$op3: 1.0,$op4: 1.0,$op5: 1.0) {
+  &:nth-child(1) {
+    opacity: $op1;
+  }
+  &:nth-child(2) {
+    opacity: $op2;
+  }
+  &:nth-child(3) {
+    opacity: $op3;
+  }
+  &:nth-child(4) {
+    opacity: $op4;
+  }
+  &:nth-child(5) {
+    opacity: $op5;
+  }
+}
+
+.owl-stage-outer {
+  width: 100%;
+  overflow: hidden;
+}
+.owl-stage {
+  display: flex;
+}
+.owl-item {
+  float: left;
+}
+.owl-nav {
+  &.disabled {
+    display: none;
+  }
+}
+.owl-dots {
+  &.disabled {
+    display: none;
+  }
+}
+.owl-dot {
+  &.active {
+
+  }
+}
+
+.slider {
+  position: relative;
+  &__item {
+    text-align: center;
+    &-title {
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px;
+      color: rgba(#fff, 0.9);
+      margin-bottom: 8px;
+
+    }
+    &-subtitle {
+      font-size: 18px;
+      line-height: 22px;
+      color: white;
+      margin-bottom: 15px;
+    }
+    &-rating {
+      display: flex;
+      margin-bottom: 20px;
+      justify-content: center;
+      .icon-star {
+        display: block;
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+        color: $yellow;
+        margin: 0 2px;
+        text-shadow: 0 0 50px rgba(255, 214, 74, 0.8);
+      }
+      &--zero {
+        .icon-star {
+          @include star(0.4,0.4,0.4,0.4,0.4);
+        }
+      }
+      &--one {
+        .icon-star {
+          @include star(1,0.4,0.4,0.4,0.4);
+        }
+      }
+      &--two {
+        .icon-star {
+          @include star(1,1,0.4,0.4,0.4);
+        }
+      }
+      &--three {
+        .icon-star {
+          @include star(1,1,1,0.4,0.4);
+        }
+      }
+      &--four {
+        .icon-star {
+          @include star(1,1,1,1,0.4);
+        }
+      }
+      &--five {
+        .icon-star {
+          @include star(1,1,1,1,1);
+        }
+      }
+    }
+    &-text {
+      color: rgba(white, 0.9);
+    }
+  }
+}
+
