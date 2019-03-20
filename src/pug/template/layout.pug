@@ -22,13 +22,13 @@ html(lang="ru")
 				+device_menu(page)
 				main
 					block content
-				+footer()
+				+footer(page)
 		else
 			+header(page)
 			+device_menu(page)
 			main
 				block content
-			+footer()
+			+footer(page)
 		script(src='js/jquery.min.js')
 		script(src='js/owl.carousel.js')
 		script(src='js/main.js')

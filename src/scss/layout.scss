@@ -258,4 +258,127 @@
   }
 }
 
+.footer{
+  background-color: #0D2165;
+  color: #F6F6F6;
+  line-height: normal;
+  &__row {
+    @include row_grid($padding_container);
+  }
+  &__menu-icons{
+    padding-top: 29px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 17px;
+  }
+  &__menu{
+    display: flex;
+    flex-wrap: wrap;
+    @include column($padding_container, 8, 8);
+    @include breakpoint($tablet_max_media){
+      margin-bottom: 5px;
+    }
+    &-item{
+      line-height: normal;
+      display: inline-block;
+      margin-right: 30px;
+      @include breakpoint($mobile_media){
+        margin-bottom: 5px;
+      }
+      &--active{
+        color: #FFD64A;
+      }
+    }
+  }
+  .social-icons{
+    @include column($padding_container, 4,4);
+    text-align: right;
+    .icon{
+      font-size: 30px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    @include breakpoint($mobile_media){
+      text-align: left;
+    }
+  }
+  &__phone-address-email{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: #F6F6F6;
+    margin-bottom: 10px;
+    @include column($padding_container, 12, 8);
+    @include breakpoint($tablet_max_media){
+      margin-bottom: 20px;
+    }
+  }
+  &__phone{
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: normal;
+    color: #F6F6F6;
+  }
+  &__email{
+    margin-right: 30px;
+    line-height: normal;
+    display: inline-block;
+  }
+  &__addres{
+    line-height: normal;
+    display: inline-block;
+  }
+  &__copy-raiting-desing{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 49px;
+    width: 100%;
+  }
+
+  &__copy-raiting{
+    display: flex;
+    @include column($padding_container, 8, 8);
+    @include breakpoint($tablet_max_media){
+      flex-direction: column;
+    }
+  }
+  &__copy{
+    margin-right: 30px;
+
+    @include breakpoint($tablet_max_media) {
+      margin-right: 0;
+      margin-bottom: 4px;
+    }
+    @include breakpoint($extra_mobile_media ){
+      margin-bottom: 10px;
+    }
+  }
+  &__rating-text{
+    margin-right: 10px;
+    @include breakpoint($tablet_max_media){
+      margin-bottom: 20px;
+    }
+  }
+  &__rating{
+    display: flex;
+    &-text{
+
+    }
+  }
+  &__design{
+    text-align: right;
+    opacity: 0.6;
+    align-self: flex-end;
+    @include column($padding_container, 4, 4);
+    @include breakpoint($mobile_media){
+      text-align: left;
+    }
+
+
+  }
+}
 
