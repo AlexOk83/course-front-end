@@ -192,3 +192,14 @@
   line-height: 45px;
   font-size: 40px;
 }
+
+@mixin before($width, $height) {
+  &:before {
+    content: '';
+    display: block;
+    width: $width;
+    height: $height;
+  }
+
+
+}

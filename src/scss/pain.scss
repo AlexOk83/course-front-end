@@ -22,20 +22,23 @@
     left: 50%;
     margin-left: -301px;
     @include bg('/pain/232@2x.png');
+
     &:before {
       content: '';
       display: block;
       width: 538px;
       height: 538px;
-      background: radial-gradient(269.00px at 50% 50%, #087CD5 0%, #1053AD 100%);
-      opacity: 0.8;
-      box-shadow: 0px 0px 120px rgba(118, 216, 251, 0.15);
       border-radius: 50%;
-      z-index: -1;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      margin-top: -269px;
+      margin-left: -269px;
+      z-index: -1;
+      background: radial-gradient(269.00px at 50% 50%, #087CD5 0%, #1053AD 100%);
+      opacity: 0.8;
+      box-shadow: 0 0 120px rgba(118, 216, 251, 0.15);
+
     }
   }
   &__list {

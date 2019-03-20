@@ -15,15 +15,28 @@
 .main {
   width: 100%;
   min-height: 100vh;
-  background-color: $bgMain;
+  background-color: $bgHeader;
+  background-image:
+    url('../images/main-bg.svg'),
+    url('../images/main%20man/3anatomy_2@2x.png'),
+    linear-gradient(238.51deg, #36007B 10.05%, #18318B 53.01%, #0782DB 84.52%);
+  background-repeat:
+    repeat-x,
+    no-repeat,
+    no-repeat;
+  background-position:
+    0 520px,
+    -189px -7px,
+    top;
+  background-size:
+    auto,
+    77%,
+    100% 1000px;
   position: relative;
-  &:before {
-    //content: '';
-    display: block;
-    width: 60vw;
-    height: 754px;
-    position: absolute;
-    @include bg('bg-main.png', 100%, top left);
+  .header {
+    &:before {
+      display: none;
+    }
   }
 }
 
