@@ -17,9 +17,8 @@
   min-height: 100vh;
 
   background-color: $bgHeader;
-  /*
   background-image:
-    url('../images/main-bg.svg'),
+    url('../images/main_bg_lawyer.svg'),
     url('../images/main%20man/3anatomy_2@2x.png'),
     linear-gradient(238.51deg, #36007B 10.05%, #18318B 53.01%, #0782DB 84.52%);
   background-repeat:
@@ -34,7 +33,17 @@
     auto,
     77%,
     100% 1000px;
-  position: relative;*/
+  @include breakpoint($tablet_max_media) {
+    background-position:
+            0 160px,
+            -189px -7px,
+            top;
+    background-size:
+            auto,
+            100%,
+            100% 1000px;
+  }
+  position: relative;
   .header {
     &:before {
       display: none;

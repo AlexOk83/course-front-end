@@ -18,6 +18,9 @@ mixin header(page)
 			.header__device-cont
 				.header__device-phone
 				.header__toggle-button: span.header__toggle-button-lines
+
+mixin icon-svg(item)
+	p(class= 'advantages__item-icon')!= item
 mixin headerContact(page)
 	header.header-contact
 		.container
@@ -37,7 +40,8 @@ mixin device_menu(page)
 			.device-toggle-content__button I Want To Avoid Surgery
 			+social_icons()
 
-
+mixin footer()
+	footer.footer
 
 mixin toggleMenu()
 	.header__toggle-menu
