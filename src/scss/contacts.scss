@@ -1,0 +1,57 @@
+.contacts{
+  &-wrapper{
+    background-color: $bgMain;
+  }
+  &-link-title-button{
+    padding-top: 55px;
+    @include column($padding_container,8,8);
+    margin: 0 auto;
+  }
+  &-link{
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-bottom: 10px;
+  }
+  &-title{
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 57px;
+    color: #FCFCFC;
+    margin-bottom: 25px;
+  }
+  &-phone{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+  &-address{
+
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 33px;
+  }
+  .form-control__button--ClarkNow{
+    margin-bottom: 40px;
+
+  }
+  &-map{
+    min-height: 463px;
+    border-radius: 8px;
+    margin-bottom: 133px;
+    position: relative;
+  @include bg('image4.png');
+    &:before{
+      content: '';
+      left: 610px;
+      top: 162px;
+      position: absolute;
+      width: 30px;
+      height: 46px;
+      @include bg('map@2x.png');
+    }
+  }
+}

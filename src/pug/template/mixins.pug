@@ -19,17 +19,20 @@ mixin treatments_item(item)
 
 mixin pain(pain_list)
 	.pain
-		.pain__map
-		.pain__list
-			.left
-				each item, index in pain_list
-					if (index < 6)
-						+pain_item(item, index)
-			.pain__button-more.form-control__button.form-control__button--orange View More Symptoms
-			.right
-				each item, index in pain_list
-					if (index >= 6)
-						+pain_item(item, index)
+		.container
+			h1.pain__title Where Are You Experiencing Pain?
+			p.pain__subtitle If you have joint pain or dysfunction, then Boulder Prolotherapy  is just the right clinic for you. Select Your Symptoms to Learn More!
+			.pain__map
+			.pain__list
+				.left
+					each item, index in pain_list
+						if (index < 6)
+							+pain_item(item, index)
+				.pain__button-more.form-control__button.form-control__button--orange View More Symptoms
+				.right
+					each item, index in pain_list
+						if (index >= 6)
+							+pain_item(item, index)
 
 mixin pain_item(item, index)
 	a.pain__item(
@@ -64,7 +67,8 @@ mixin select(list_options, value, name, required)
 
 mixin button(type, label, classModify)
 	button.form-control__button(class= 'form-control__button--' +classModify, type= type)= label
-
+mixin alink(type, label, classModify,link)
+	a.form-control__button(href= link, class= 'form-control__button--' +classModify, type= type)= label
 mixin slider(data)
 	h2.h2 Testimonials
 	.slider

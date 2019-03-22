@@ -3,7 +3,7 @@ include variable
 include mixins
 include content_mixins
 include layout_mixins
-
+include mixin-treatments
 html(lang="ru")
 	head
 		title Boulder Prolotherapy
@@ -23,12 +23,18 @@ html(lang="ru")
 				main
 					block content
 				+footer(page)
+		else if(page == 'contactus')
+			.wrapper
+				+headerContact(page)
+				block content
+			+footer(page)
 		else
 			+header(page)
 			+device_menu(page)
 			main
 				block content
 			+footer(page)
+
 		script(src='js/jquery.min.js')
 		script(src='js/owl.carousel.js')
 		script(src='js/main.js')

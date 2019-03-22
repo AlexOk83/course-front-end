@@ -45,6 +45,8 @@
 .header {
   padding-top: 34px;
   position: relative;
+  background-color: $bgHeader;
+  padding-bottom: 20px;
   @media screen and (max-width: 1279px) {
     z-index: 300;
   }
@@ -187,12 +189,12 @@
   &:before {
     content: '';
     display: block;
-    width: 300vh;
-    height: 300vh;
+    width: 800vh;
+    height: 800vh;
     background-color: $blue;
     position: absolute;
-    top: calc(-150vh + 30px);
-    right: calc(-150vh + 19px);
+    top: calc(-400vh + 30px);
+    right: calc(-400vh + 19px);
     border-radius: 50%;
     transform: scale(0);
     transition: all 1s ease-out;
@@ -340,11 +342,12 @@
   }
 
   &__copy-raiting{
-    display: flex;
+
     @include column($padding_container, 8, 8);
     @include breakpoint($tablet_max_media){
       flex-direction: column;
     }
+    display: flex;
   }
   &__copy{
     margin-right: 30px;
@@ -372,7 +375,7 @@
   &__design{
     text-align: right;
     opacity: 0.6;
-    align-self: flex-end;
+    //align-self: flex-end;
     @include column($padding_container, 4, 4);
     @include breakpoint($mobile_media){
       text-align: left;

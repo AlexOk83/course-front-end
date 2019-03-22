@@ -18,6 +18,17 @@ mixin header(page)
 			.header__device-cont
 				.header__device-phone
 				.header__toggle-button: span.header__toggle-button-lines
+mixin headerContact(page)
+	header.header-contact
+		.container
+			.header-contact_block
+				a.header__logo(href="index.html")= logo
+				.header-contact_phone= 'Our phone and fax number is'
+					p.header-contact_phone-text= phone
+				.header-contact_email= 'Contact us by e-mail at'
+					p.header-contact_email-text= 'boulderprolo@earthlink.net'
+				.header-contact_addres= '1790 30th Street, Suite 230,'
+					.header-contact_addres-text= 'Boulder, CO'
 
 mixin device_menu(page)
 	.device-toggle-content
@@ -26,8 +37,7 @@ mixin device_menu(page)
 			.device-toggle-content__button I Want To Avoid Surgery
 			+social_icons()
 
-mixin footer()
-	footer.footer
+
 
 mixin toggleMenu()
 	.header__toggle-menu

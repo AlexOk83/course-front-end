@@ -1,0 +1,15 @@
+extends template/layout
+block var
+	- var page = 'contacts'
+block content
+	.contacts-wrapper
+		.container
+			.contacts-link-title-button
+				.contacts-link= 'Home / Contact'
+				h2.contacts-title= 'Boulder Prolotherapy'
+				.contacts-phone= phone
+				.contacts-address= 'Gary B. Clark, MD, MPA, 1790 30th Street, Suite 230, Boulder, CO'
+				+button('button','Contact Dr. Clark Now','ClarkNow')
+		.container
+			.contacts-map
+		+contactUs()

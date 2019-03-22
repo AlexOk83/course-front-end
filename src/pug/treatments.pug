@@ -2,4 +2,9 @@ extends template/layout
 block var
 	- var page = 'treatments'
 block content
-	+treatments_list(treatments_list)
+	+info-block()
+	+pain(pain_list)
+	.slider-wrapper
+		.container.zindex
+			+ slider(slider__data)
+	+contactUs()

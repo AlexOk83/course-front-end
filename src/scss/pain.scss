@@ -10,9 +10,35 @@
 }
 
 .pain {
+  background-color: $bgMain;
   position: relative;
   @include breakpoint($desktop_media) {
     min-height: 704px;
+  }
+  &__title{
+    padding-top: 100px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 17px;
+  }
+  &__subtitle{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto  ;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    @include breakpoint($tablet_min_media){
+
+    }
   }
   &__map {
     @include hide_device();
@@ -23,17 +49,19 @@
     margin-left: -301px;
     @include bg('/pain/232@2x.png');
 
+
     &:before {
       content: '';
-      display: block;
+      //display: block;
       width: 538px;
       height: 538px;
       border-radius: 50%;
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-top: -269px;
-      margin-left: -269px;
+      transform: translate(-50%,-50%);
+      //margin-top: -269px;
+      //margin-left: -269px;
       z-index: -1;
       background: radial-gradient(269.00px at 50% 50%, #087CD5 0%, #1053AD 100%);
       opacity: 0.8;
