@@ -1,6 +1,17 @@
 .contacts{
   &-wrapper{
     background-color: $bgMain;
+   // background: linear-gradient(241.38deg, #36007B -0.47%, #18318B 54.26%, #0782DB 94.41%);
+    background-repeat: no-repeat ;
+    .header{
+      background: none;
+      &:before{
+        background: none;
+      }
+    }
+    .treatments-contacts{
+     // background: linear-gradient(241.38deg, #36007B -0.47%, #18318B 54.26%, #0782DB 94.41%);
+    }
   }
   &-link-title-button{
     padding-top: 55px;
@@ -41,17 +52,23 @@
   &-map{
     min-height: 463px;
     border-radius: 8px;
-    margin-bottom: 133px;
+
     position: relative;
+    width: 100%;
   @include bg('image4.png');
     &:before{
       content: '';
+      display: flex;
+      justify-content: center;
       left: 610px;
       top: 162px;
       position: absolute;
       width: 30px;
       height: 46px;
       @include bg('map@2x.png');
+      @include breakpoint($tablet_max_media){
+        left: 367px;
+      }
     }
   }
 }

@@ -1,21 +1,12 @@
 include example-code
 
-mixin info-block()
-	section.info-block
-		.container
-			.info-block__img
-		.container
-			p.info-block__link Home / Treatments
-			h2.info-block__title Orthopedic Treatment – Boulder Prolotherapy
-
-					//img(src='../images/head/treatments@2x.jpg' alt='' width="1180" height="320")
-			.info-block__text
-				.info-block__list.list
-					.info-block__item: p.list__text= textHealing
-					.info-block__item: +button('button','Contact Dr. Clark Now','ClarkNow')
-					.info-block__item: p.list__option= textOption
-					.info-block__item: p.list__optionNext= textOptionNext
-					.info-block__item: +social__link()
+mixin imagesHeader(classImg,link,title)
+		.header-images
+			.container
+				.header-images__img(class='header-images__img--'+ classImg)
+			.container
+				p.header-images__link= link
+				h2.header-images__title= title
 
 
 mixin social__link()
@@ -39,7 +30,7 @@ mixin contactUs()
 		.container
 			.treatments-contacts_wrapper
 				.treatments-contacts__img
-					.treatments-contacts__bg
+					img(src="../images/contact/man5_32@2x.png" width='719' height='560')
 				.treatments-contacts__text
 					h2.treatments-contacts__title Contact Us Today
 					p.treatments-contacts__subtitle Our overall goal is to resolve the underlying structural causes of your pain, while relieving you of long-term dependency prescription analgesic medications. Write to us using the button below or call
@@ -48,3 +39,10 @@ mixin contactUs()
 
 
 
+mixin faqlist(list)
+	each item in list
+		.faq-block__item
+			img.faq-block__img(src= item.src width='380' height='205')
+			h3.faq-block__h3= item.title
+			p.faq-block__subtitle= item.subtitle
+			+button('button','Read more','faqread')

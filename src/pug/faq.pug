@@ -1,0 +1,27 @@
+extends template/layout
+block var
+	- var page = 'faq'
+block content
+	section.faq-block
+		+imagesHeader('faq','Home / FAQ','Frequently Asked Questions – Boulder Prolotherapy')
+		.container
+			.faq-block__text
+				p.faq-block__subtext Boulder Prolotherapy at the Center for Healing Injury and Pain in Boulder, Colorado, offers therapies for ligamentous, muscular, myofascial, and joint problems resulting from normal wear-and-tear and and traumatic sprain injuries.
+			.faq-block__list
+				+faqlist(faqlist)
+			.pagination
+				.pagination_arrow-prev
+					span.arrow-prev
+				.pagination_list
+					.pagination_item.active 1
+					.pagination_item 2
+					.pagination_item 3
+					.pagination_item 4
+					.pagination_item 5
+					.pagination_item ...
+					.pagination_item 64
+
+				.pagination_arrow-next
+					span.arrow-prev
+	+contactUs()
+

@@ -11,7 +11,11 @@
 
 .pain {
   background-color: $bgMain;
+  padding-bottom: 82px;
   position: relative;
+  @include breakpoint($mobile_media){
+    overflow: hidden;
+  }
   @include breakpoint($desktop_media) {
     min-height: 704px;
   }
@@ -36,23 +40,35 @@
     color: #FFFFFF;
     margin-bottom: 15px;
     opacity: 0.9;
-    @include breakpoint($tablet_min_media){
 
+    @include breakpoint($tablet_min_media){
+      margin-bottom: 40px;
     }
   }
   &__map {
-    @include hide_device();
+
     width: 602px;
     height: 704px;
     position: absolute;
     left: 50%;
     margin-left: -301px;
     @include bg('/pain/232@2x.png');
-
+    @include breakpoint($tablet_max_media){
+      z-index: -1;
+      opacity: 0.2;
+      margin-top: -175px;
+    }
+    @include breakpoint($mobile_media){
+      z-index: -1;
+      opacity: 0.2;
+      margin-top: -175px;
+      margin-left: -340px;
+    }
 
     &:before {
       content: '';
       //display: block;
+      @include hide_device();
       width: 538px;
       height: 538px;
       border-radius: 50%;
@@ -84,6 +100,7 @@
       }
       @include breakpoint($tablet_max_media) {
         width: 100%;
+
       }
       @extend %pain_column;
     }
@@ -96,6 +113,7 @@
         display: none;
         &.active {
           display: flex;
+          padding-bottom: 80px;
         }
       }
       @extend %pain_column;
@@ -110,7 +128,6 @@
     font-weight: bold;
     width: 100%;
     height: 37px;
-    //transition: background-color 0.5s ease-out;
     border-radius: 4px;
     background-color: transparent;
     @include breakpoint($tablet_max_media) {
@@ -130,6 +147,7 @@
     }
   }
   &__point{
+    @include hide_device();
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -172,7 +190,16 @@
   }
   &__button-more {
     @include hide_desktop();
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
     margin: auto;
+    margin-bottom: 80px;
     &.activated {
       display: none;
     }
