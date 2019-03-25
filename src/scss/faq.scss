@@ -21,11 +21,14 @@
 
   }
   &__item{
-    @include column($padding_10,4,6);
+    @include column($padding_10,4,6,6);
   }
   &__img{
     margin-bottom: 20px;
     width: 100%;
+
+      object-fit: contain;
+
   }
   &__h3{
     font-weight: bold;
@@ -51,6 +54,7 @@
     text-align: center;
     height: 37px;
     color: #000000;
+    outline: none;
 
   }
 }

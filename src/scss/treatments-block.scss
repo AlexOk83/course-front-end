@@ -273,7 +273,13 @@
 
 
 .header-images{
-
+.container{
+  &:first-child{
+    @include breakpoint($mobile_media){
+      padding: 0;
+    }
+  }
+}
   &__img{
     &--faq{
       background-image:linear-gradient(0deg, rgba(23, 49, 139, 0.6), rgba(23, 49, 139, 0.6)), url('../images/head/faq@2x.jpg');
@@ -283,7 +289,7 @@
 
     }
     //object-fit: contain;
-    @include column(0,12,12);
+    @include column($padding_container,12,12);
     margin-bottom: 40px;
     min-height: 320px;
     position: relative;
@@ -292,12 +298,14 @@
     background-repeat: no-repeat,no-repeat;
     box-shadow: 0 0 120px rgba(118, 216, 251, 0.15);
     border-radius: 8px;
-    @include breakpoint($mobile_media){
-      min-height: 250px;
-      border-radius: 0;
-    }
+
     @include breakpoint($tablet_max_media) {
+      min-height: 250px;
+    }
+    @include breakpoint($mobile_media){
       min-height: 120px;
+      border-radius: 0;
+
     }
 
   }
@@ -315,8 +323,19 @@
     @include column(0,8,10);
     color: #FFFFFF;
     margin-bottom: 10px;
-    opacity: 0.6;
     @include hide_device();
+
+  }
+  &__home{
+    font-size: 18px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+
+    opacity: 0.9;
+  }
+  &__FAQ{
+    opacity: 0.6;
   }
   &__title{
     z-index: 10;
@@ -330,15 +349,7 @@
     @include column(0,8,10);
     color: #FCFCFC;
 
-    @include breakpoint($mobile_media){
-      position: static;
-      // display: block;
-      font-weight: 800;
-      font-size: 32px;
-      line-height: 36px;
-      color: #333333;
-      margin-bottom: 20px;
-    }
+
     @include breakpoint($tablet_max_media) {
       @include column(0,8,10);
       position: static;
@@ -351,7 +362,44 @@
       color: #333333;
 
     }
+    @include breakpoint($mobile_media){
+      position: static;
+      // display: block;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 36px;
+      color: #333333;
+      margin-bottom: 20px;
+    }
   }
 }
 
 
+.breadcrumbs{
+ &__list {
+  list-style: none;
+  display: flex;
+}
+  &__item{
+    margin-right: 15px;
+    position: relative;
+    &:last-child:before{
+      display: none;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 1.5px;
+      height: 16px;
+      left: 49px;
+      top: -1px;
+      opacity: 0.7;
+      transform: rotate(20deg);
+      background-color: $white;
+
+    }
+    .active{
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,11 +1,12 @@
 include example-code
 
-mixin imagesHeader(classImg,link,title)
+mixin imagesHeader(classImg,title,mas)
 		.header-images
 			.container
 				.header-images__img(class='header-images__img--'+ classImg)
 			.container
-				p.header-images__link= link
+				.header-images__link
+					+breadcrumbs(mas)
 				h2.header-images__title= title
 
 
@@ -19,6 +20,12 @@ mixin social__link()
 			.social-link__item: a.icons.social-link-inLinks(href='#')
 			.social-link__item: p.social-link__text Thanks for reading! Please like and share.
 
+mixin breadcrumbs(mas)
+	ul.breadcrumbs__list
+		li.breadcrumbs__item: a(href="index.html") HOME
+		each item in mas
+			li.breadcrumbs__item
+				a(href= item.url+'.html',class={'active': page === item.url})= item.name
 
 
 
