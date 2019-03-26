@@ -244,7 +244,7 @@ table{
     &_text{
       padding: 51px 0 0 60px;
       margin-left: 60px;
-      @include column(0,8,8);
+      @include column(0,8,6,6);
       font-style: normal;
       font-weight: 800;
       font-size: 34px;
@@ -252,7 +252,12 @@ table{
       color: #FFFFFF;
       margin-bottom: 25px;
       position: relative;
+      @include breakpoint($mobile_media){
+        margin-left: 2%;
+        margin-bottom: 25px;
+      }
       &:before{
+        @include hide_device();
         content: "";
         position: absolute;
         top: 20%;
@@ -268,14 +273,20 @@ table{
       font-weight: normal;
       font-size: 16px;
       line-height: 24px;
-
       color: rgba(255, 255, 255, 0.5);
+      @include breakpoint($mobile_media){
 
+        padding-bottom: 25px;
+      }
     }
   }
   &-video{
+    width: 100%;
     min-height: 440px;
     margin-bottom: 40px;
+    iframe{
+      width: 100%;
+    }
   }
   &-textnext{
     font-style: normal;
