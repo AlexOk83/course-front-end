@@ -1,8 +1,9 @@
 .contacts{
   &-wrapper{
-    background-color: $bgMain;
-   // background: linear-gradient(241.38deg, #36007B -0.47%, #18318B 54.26%, #0782DB 94.41%);
+    background-color: #17318B;
+    position: relative;
     background-repeat: no-repeat ;
+
     .header{
       background: none;
       &:before{
@@ -11,6 +12,15 @@
     }
     .treatments-contacts{
      // background: linear-gradient(241.38deg, #36007B -0.47%, #18318B 54.26%, #0782DB 94.41%);
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      min-height: 800px;
+      filter: blur(50px);
+      background: linear-gradient(241.38deg, #36007B -0.47%, #18318B 54.26%, #0782DB 94.41%);
     }
   }
   &-link-title-button{

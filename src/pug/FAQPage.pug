@@ -1,0 +1,78 @@
+extends template/layout
+block var
+	- var page = 'faqpage'
+block content
+	section.faq-page
+		+imagesHeader('faqpage','FAQ Page (Example) – Boulder Prolotherapy',faqpage)
+		.container
+			.faq-page__container
+				.faq-page__subheader
+					p.text-up Boulder Prolotherapy at the Center for Healing Injury and Pain in Boulder, Colorado, offers therapies for ligamentous, muscular, myofascial, and joint problems resulting from normal wear-and-tear and and traumatic sprain injuries.
+					p.text-down Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate.
+				.faq-page__images
+					each item in imagesSlider
+						img.faq-page__image(src= item.src alt= item.alt)
+				.faq-page__textsubimages Orthopedic Medicine consists of medical evaluation and nonsurgical treatment of the musculoskeletal system
+				.faq-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate.
+		.container
+			.table
+				table
+					thead
+						tr
+							th Traditional Rental
+							th Ecommerce
+							th 3rd Column
+					tbody
+						tr
+							td If you find what you need in the store, you can grab it right away without having to wait for the time it takes to ship
+							td The time investment is much smaller. You can browse several sites and options within minutes without having to drive from place to place
+							td You can often find products at cheaper prices than you would by visiting the traditional stores because websites don’t require building upkeep, hundreds of sales personnel, etc.
+						tr
+							td Depending on what it is you intend to buy, you can try the goods on before making your purchase
+							td There is a broader range of products, especially when exploring a particular brand, size, color, feature, etc.
+							td Product presentations come with greater depth and immersive experience (sound, video, detailed descriptions, live Q&A)
+						tr
+							td Some people take pleasure in browsing and shopping (but not me!)
+							td You can buy from almost any country in the world. There are no borders in the online world (at least not yet).
+							td $700
+						tr
+							td
+							td You can often find products at cheaper prices than you would by visiting the traditional stores because websites don’t require building upkeep, hundreds of sales personnel, etc.
+							td
+						tr
+							td
+							td You can read customer reviews
+							td
+						tr
+							td
+							td Product presentations come with greater depth and immersive experience (sound, video, detailed descriptions, live Q&A)
+							td $900
+						tr
+							td
+							td An ever-increasing trend, more and more shops will allow for free returns should a product not fit properly or meet the standards they claimed online.
+							td You can read customer reviews
+
+		.container
+			section.freim
+				h2.freim-h2 Heading 2
+				p.freim-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate.
+				.freim-saying
+					p.freim-saying_text If you can make forms easy and pleasurable to use (forms!), then most everything else will be a cinch.
+					p.freim-saying_ps — Heydon Pickering
+				.freim-video
+					iframe(width='768', height='440', src='https://www.youtube.com/embed/QBp9SAdAMWo', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
+				h2.freim-h2 Heading 2
+				p.freim-textnext Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate.
+				ul.freim-list
+					li.freim-item Simple Habit by Simple Habit Inc
+					li.freim-item Be My Eyes byBe My Eyes
+					li.freim-item Khan Academy by Khan Academy
+					li.freim-item Old Man's Journey by Broken Rules Interactive Media GmbH
+					li.freim-item Episode by Pocket Gems
+				p.freim-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+				+social__link()
+			section.questions
+				h2.questions-h2 The Latest Questions
+				.faq-block__list
+					+faqlist(faqlistpage)

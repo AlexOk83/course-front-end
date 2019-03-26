@@ -67,8 +67,12 @@ mixin select(list_options, value, name, required)
 
 mixin button(type, label, classModify)
 	button.form-control__button(class= 'form-control__button--' +classModify, type= type)= label
-mixin alink(type, label, classModify,link)
-	a.form-control__button(href= link, class= 'form-control__button--' +classModify, type= type)= label
+
+
+mixin alink( label, classModify,link)
+	a.form-control__button(href= link, class= 'form-control__button--' +classModify)= label
+
+
 mixin slider(data)
 	h2.h2 Testimonials
 	.slider

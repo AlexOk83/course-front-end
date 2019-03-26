@@ -9,6 +9,18 @@ mixin imagesHeader(classImg,title,mas)
 					+breadcrumbs(mas)
 				h2.header-images__title= title
 
+mixin breadcrumbs(mas)
+	ul.breadcrumbs__list
+		li.breadcrumbs__item: a(href="index.html") Home /
+		each item in mas
+			li.breadcrumbs__item
+				if(page==="faqpage")
+					a(href="faq.html") FAQ /
+					li.breadcrumbs__item
+						a(href= item.url+'.html',class={'active': page === item.url})= item.name
+				else
+					a(href= item.url+'.html',class={'active': page === item.url})= item.name
+
 
 mixin social__link()
 	.social-link
@@ -20,14 +32,28 @@ mixin social__link()
 			.social-link__item: a.icons.social-link-inLinks(href='#')
 			.social-link__item: p.social-link__text Thanks for reading! Please like and share.
 
-mixin breadcrumbs(mas)
-	ul.breadcrumbs__list
-		li.breadcrumbs__item: a(href="index.html") HOME
-		each item in mas
-			li.breadcrumbs__item
-				a(href= item.url+'.html',class={'active': page === item.url})= item.name
 
 
+mixin pagination(active_page)
+	.pagination
+		.pagination_arrow-prev
+			span.arrow-prev
+		.pagination_list
+			-for(let i=0; i<66; i++)
+				if (i === active_page - 4)
+					.pagination_item.pagination_item--prev: a(href='#') ...
+				if (i >= active_page - 3 && i < active_page)
+					.pagination_item.pagination_item--prev: a(href='#')= i+1
+				else if (active_page === i)
+					.pagination_item.active: a(href='#')= i+1
+				else if (i > active_page && i <= active_page + 3)
+					.pagination_item.pagination_item--next: a(href='#')= i+1
+				else if (i === active_page + 4)
+					.pagination_item.pagination_item--prev: a(href='#') ...
+				else
+					.pagination_item: a(href='#')= i+1
+		.pagination_arrow-next
+			span.arrow-prev
 
 
 
@@ -42,14 +68,15 @@ mixin contactUs()
 					h2.treatments-contacts__title Contact Us Today
 					p.treatments-contacts__subtitle Our overall goal is to resolve the underlying structural causes of your pain, while relieving you of long-term dependency prescription analgesic medications. Write to us using the button below or call
 					p.treatments-contacts__phone= phone
-					+alink('button','Contact Us','contactUs',"contactus.html")
+					+alink('Contact Us','contactUs',"contactus.html")
 
 
 
-mixin faqlist(list)
-	each item in list
-		.faq-block__item
-			img.faq-block__img(src= item.src width='380' height='205')
-			h3.faq-block__h3= item.title
-			p.faq-block__subtitle= item.subtitle
-			+button('button','Read more','faqread')
+mixin faqlist(list,count)
+
+		each item in list
+			.faq-block__item
+				img.faq-block__img(src= item.src width='380' height='205')
+				h3.faq-block__h3= item.title
+				p.faq-block__subtitle= item.subtitle
+				+alink('Read more','faqread','faqpage.html')

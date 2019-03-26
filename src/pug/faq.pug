@@ -8,20 +8,15 @@ block content
 			.faq-block__text
 				p.faq-block__subtext Boulder Prolotherapy at the Center for Healing Injury and Pain in Boulder, Colorado, offers therapies for ligamentous, muscular, myofascial, and joint problems resulting from normal wear-and-tear and and traumatic sprain injuries.
 			.faq-block__list
-				+faqlist(faqlist)
-			.pagination
-				.pagination_arrow-prev
-					span.arrow-prev
-				.pagination_list
-					.pagination_item.active 1
-					.pagination_item 2
-					.pagination_item 3
-					.pagination_item 4
-					.pagination_item 5
-					.pagination_item ...
-					.pagination_item 64
+				+faqlist(faqlist,9)
+			+pagination(10)
 
-				.pagination_arrow-next
-					span.arrow-prev
+
 	+contactUs()
+	template
+		.faq-block__item
+			img.faq-block__img(src="" width='380' height='205')
+			h3.faq-block__h3= ""
+			p.faq-block__subtitle= ""
+			+alink('button','Read more','faqread','faqpage.html')
 

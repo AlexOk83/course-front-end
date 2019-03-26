@@ -71,6 +71,8 @@
 }
 
 .social-link{
+  background-color: $white;
+  border-radius: 8px;
   &__list{
     background: #FFFFFF;
     border-radius: 8px;
@@ -281,6 +283,9 @@
   }
 }
   &__img{
+    &--faqpage{
+      background-image:linear-gradient(0deg, rgba(23, 49, 139, 0.6), rgba(23, 49, 139, 0.6)), url('../images/head/faq@2x.jpg');
+    }
     &--faq{
       background-image:linear-gradient(0deg, rgba(23, 49, 139, 0.6), rgba(23, 49, 139, 0.6)), url('../images/head/faq@2x.jpg');
     }
@@ -326,6 +331,7 @@
     @include hide_device();
 
   }
+
   &__home{
     font-size: 18px;
     line-height: 27px;
@@ -353,7 +359,6 @@
     @include breakpoint($tablet_max_media) {
       @include column(0,8,10);
       position: static;
-      // display: block;
       font-weight: 800;
       font-size: 32px;
       line-height: 36px;
@@ -364,7 +369,6 @@
     }
     @include breakpoint($mobile_media){
       position: static;
-      // display: block;
       font-weight: 800;
       font-size: 32px;
       line-height: 36px;
@@ -377,17 +381,26 @@
 
 .breadcrumbs{
  &__list {
+
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 27px;
+
+   color: #FFFFFF;
+   margin-bottom: 10px;
+
   list-style: none;
   display: flex;
 }
   &__item{
-    margin-right: 15px;
+    margin-right: 7px;
     position: relative;
     &:last-child:before{
       display: none;
     }
     &:before{
-      content: "";
+      //content: "";
       position: absolute;
       width: 1.5px;
       height: 16px;

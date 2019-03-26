@@ -18,7 +18,19 @@
   &__list{
     margin: 0 auto;
     @include row_grid($padding_10);
+    .form-control__button--faqread{
+      margin-bottom: 40px;
+      max-width: 140px;
+      font-weight: bold;
+      font-size: 18px;
 
+      text-align: center;
+      height: 37px;
+      color: #000000;
+      outline: none;
+      line-height: 37px;
+
+    }
   }
   &__item{
     @include column($padding_10,4,6,6);
@@ -45,18 +57,7 @@
     color: rgba(51, 51, 51, 0.9);
     margin-bottom: 20px;
   }
-  .form-control__button--faqread{
-    margin-bottom: 40px;
-    max-width: 140px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: normal;
-    text-align: center;
-    height: 37px;
-    color: #000000;
-    outline: none;
 
-  }
 }
 
 %afterbefore{
@@ -82,7 +83,7 @@
     .arrow-prev {
 
       position: absolute;
-      top: 50%;
+      top: 100%;
       width: 20px;
       height: 2px;
       background-color: #222;
@@ -113,7 +114,7 @@
 
     .arrow-prev {
       position: absolute;
-      top: 50%;
+      top: 100%;
       width: 20px;
       height: 2px;
       background-color: #222;
@@ -138,6 +139,10 @@
   }
   &_list{
     display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
   &_item{
     min-width: 30px;
@@ -147,9 +152,20 @@
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+    color: black;
+    padding: 10px;
+    display: none;
     color: rgba(51, 51, 51, 0.9);
-    &.active{
-      color: rgba(51, 51, 51, 0.6);
+    &:first-child,
+    &:last-child,
+    &--next,
+    &--prev
+    {
+      display: block;
+    }
+    &.active {
+      color: yellow;
+      display: block;
 
     }
   }
