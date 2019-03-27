@@ -277,6 +277,14 @@
 .header-images{
 .container{
   &:first-child{
+    @include column(0,12,12);
+
+    @include breakpoint($tablet_max_media) {
+      padding: 0;
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto  ;
+    }
     @include breakpoint($mobile_media){
       padding: 0;
     }
@@ -306,9 +314,13 @@
 
     @include breakpoint($tablet_max_media) {
       min-height: 250px;
+      width: 100%;
+      border-radius: 0;
+
     }
     @include breakpoint($mobile_media){
       min-height: 120px;
+      height: 100%;
       border-radius: 0;
 
     }

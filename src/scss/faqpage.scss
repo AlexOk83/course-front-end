@@ -26,6 +26,7 @@
   &__images{
     margin-bottom: 5px;
     position: relative;
+    border-radius: 8px;
     .owl-stage-outer {
       width: 100%;
       overflow: hidden;
@@ -40,6 +41,13 @@
     }
     .owl-item {
       float: left;
+      border-radius: 8px;
+      .active{
+        border-radius: 8px;
+        .cloned{
+          border-radius: 8px;
+        }
+      }
     }
     .owl-nav {
       border: none;
@@ -59,7 +67,7 @@
 
       }
       .owl-prev{
-
+        border: none;
         left: 0;
         top: 50%;
         width: 20px;
@@ -145,6 +153,7 @@
   }
   &__image{
     width: 100%;
+    border-radius: 8px;
   }
   &__textsubimages{
     font-style: normal;
@@ -172,48 +181,49 @@
   @include column(0,8,10);
   margin: 0 auto;
   margin-bottom: 40px;
-}
-table{
-  @include hide_device();
-  width: 100%;
+  table{
+    @include hide_device();
+    width: 100%;
 
-  border-collapse: collapse;
+    border-collapse: collapse;
 
- thead{
-   text-align: left;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-
-   th{
-
-    width: 33%;
-     margin-right: 20px;
-     padding: 10px 10px 10px 0;
-     font-weight: 600;
-     font-size: 18px;
-     line-height: 27px;
-     color: #333333;
-   }
-
- }
-  tbody{
-    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-  tr{
-
-    margin-bottom: 41px;
-  }
-    td{
-      vertical-align: top;
+    thead{
       text-align: left;
-      table-layout: fixed;
-      padding: 20px 10px 20px 0;
-      font-size: 18px;
-      line-height: 27px;
-
-      color: #333333;
       border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+
+      th{
+
+        width: 33%;
+        margin-right: 20px;
+        padding: 10px 10px 10px 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #333333;
+      }
+
+    }
+    tbody{
+      border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+      tr{
+
+        margin-bottom: 41px;
+      }
+      td{
+        vertical-align: top;
+        text-align: left;
+        table-layout: fixed;
+        padding: 20px 10px 20px 0;
+        font-size: 18px;
+        line-height: 27px;
+
+        color: #333333;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+      }
     }
   }
 }
+
 
 .freim {
   @include column(0,8,10);
