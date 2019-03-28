@@ -72,14 +72,14 @@
       content: '';
       display: flex;
       justify-content: center;
-      left: 610px;
-      top: 162px;
+      left: 51%;
+      top: 35%;
       position: absolute;
       width: 30px;
       height: 46px;
       @include bg('map@2x.png');
       @include breakpoint($tablet_max_media){
-        left: 367px;
+
       }
     }
   }
