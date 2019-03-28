@@ -275,6 +275,8 @@
 
 
 .header-images{
+  position: relative;
+  z-index: 5;
 .container{
   &:first-child{
     @include column(0,12,12);

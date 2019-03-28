@@ -12,48 +12,13 @@
   margin-bottom: 13px;
 }
 
-.main {
-  width: 100%;
-  min-height: 100vh;
 
-  background-color: $bgHeader;
-  background-image:
-    url('../images/main_bg_lawyer.svg'),
-    url('../images/main%20man/3anatomy_2@2x.png'),
-    linear-gradient(238.51deg, #36007B 10.05%, #18318B 53.01%, #0782DB 84.52%);
-  background-repeat:
-    repeat-x,
-    no-repeat,
-    no-repeat;
-  background-position:
-    0 520px,
-    -189px -7px,
-    top;
-  background-size:
-    auto,
-    77%,
-    100% 1000px;
-  @include breakpoint($tablet_max_media) {
-    background-position:
-            0 160px,
-            -189px -7px,
-            top;
-    background-size:
-            auto,
-            100%,
-            100% 1000px;
-  }
-  position: relative;
-  .header {
-    &:before {
-      display: none;
-    }
-  }
-}
 
 .header {
-  padding-top: 34px;
   position: relative;
+  z-index: 3;
+  padding-top: 34px;
+
   background-color: $bgHeader;
   padding-bottom: 20px;
   @media screen and (max-width: 1279px) {
@@ -90,16 +55,28 @@
     margin-left: 45px;
     display: flex;
     flex-basis: 100%;
+
     @include hide_device();
   }
   &__menu-item {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: normal;
+
+    color: #E5E5E5;
+
     margin-right: 20px;
-    color: $white;
+
     white-space: nowrap;
     display: block;
-    &:hover {
-      text-decoration: underline;
+    a{
+      transition: all .1s ease-in-out;
+      &:hover {
+        color: $yellow;
+      }
     }
+
   }
   &__contacts {
     width: 230px;

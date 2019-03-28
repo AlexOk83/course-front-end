@@ -178,11 +178,23 @@
   }
 }
 .table{
-  @include column(0,8,10);
+  @include column(0,8,10,12,8);
   margin: 0 auto;
   margin-bottom: 40px;
+  @include breakpoint($mobile_media){
+    min-width: 767px;
+  }
+  @include breakpoint($extra_mobile_media2){
+    min-width: 450px;
+  }
+  @include breakpoint($extra_mobile_media){
+    display: none !important;
+  }
   table{
-    @include hide_device();
+    @include breakpoint($tablet_max_media){
+
+    }
+
     width: 100%;
 
     border-collapse: collapse;
@@ -285,6 +297,10 @@
       line-height: 24px;
       color: rgba(255, 255, 255, 0.5);
       @include breakpoint($mobile_media){
+
+        padding-bottom: 25px;
+      }
+      @include breakpoint($tablet_max_media){
 
         padding-bottom: 25px;
       }

@@ -1,4 +1,5 @@
 .contacts{
+
   &-wrapper{
     background-color: #17318B;
     position: relative;
@@ -8,6 +9,7 @@
       background: none;
       &:before{
         background: none;
+        width: 0;
       }
     }
     .treatments-contacts{
