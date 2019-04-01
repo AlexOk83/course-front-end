@@ -10,6 +10,7 @@ mixin treatments_list(list)
 				each item in list
 					+treatments_item(item)
 
+
 mixin treatments_item(item)
 	.treatments__wrapper
 		.treatments__item
@@ -17,6 +18,21 @@ mixin treatments_item(item)
 			.treatments__item-cont
 				.treatments__item-title: a(href= item.url)= item.title
 				.treatments__item-description= item.description
+
+mixin diagnosis_list(list)
+	.diagnosis_list__wrapper
+		.container
+			h2.h2 Types of Diagnostics
+			.diagnosis__row
+				each item in list
+					+diagnosis_item(item)
+mixin diagnosis_item(item)
+	.diagnosis__wrapper
+		.diagnosis__item
+			.diagnosis__item-image: img(src= item.image, alt= item.title)
+			.diagnosis__item-cont
+				.diagnosis__item-title: a(href= item.url)= item.title
+				.diagnosis__item-description= item.description
 
 mixin pain(pain_list)
 	.pain

@@ -10,16 +10,15 @@
 }
 .main {
   position: relative;
+  overflow: hidden;
   width: 100%;
   min-height: 100vh;
+  z-index: 3;
   background-color: $bgHeader;
-  background-image:url('../images/main%20man/3anatomy@2x1.png') ,linear-gradient(238.51deg, #36007B 10.05%, #18318B 53.01%, #0782DB 84.52%);
+  background-image:url('../images/main%20man/3anatomy@2x1.png') ,linear-gradient(238.51deg, #36007B 10.05%, #0782DB 53.01%, #0782DB 84.52%);
   background-repeat: no-repeat no-repeat;
-
-  background-position:-164px -7px, 0 0;
-
-
-  background-size: 70% 24% ,100% 100%;
+  background-position: -50px -7px, 0 0;
+  background-size: 65% 23% ,100% 100%;
 
   @include breakpoint($tablet_max_media) {
     background-position:  -189px -7px,0 0;
@@ -27,8 +26,8 @@
   };
   @include breakpoint($mobile_media) {
     background-image:url('../images/main%20man/3anatomy@2x1.png') ,linear-gradient(238.51deg,  #18318B 10.05%,#0782DB 53.01%, #0782DB 84.52%);
-    background-position:  -228px -7px,0 0;
-    background-size:  160%, 100%;
+    background-position:  -241px -7px,0 0;
+    background-size:  180%, 100%;
   };
   &:before{
     content: "";
@@ -42,6 +41,10 @@
       background:  linear-gradient(238.51deg, #17318B 21.05%,#0782DB 53.01%, #0782DB 84.52%);
       opacity: 0.5 ;
     };
+
+  }
+  &:after{
+
   }
   .header {
     background-color: transparent;
@@ -120,16 +123,15 @@
     font-weight: 800;
     font-size: 50px;
     line-height: 57px;
-    padding-right: 182px;
+    padding-right: 16%;
     @include breakpoint($tablet_max_media) {
       font-size: 32px;
       line-height: 36px;
-      padding-right: 250px;
+
       margin-bottom: 15px;
     }
-    @include breakpoint($mobile_media) {
-      padding-right: 185px;
-    }
+
+
   }
   &__header-description {
     @include column(0, 9, 12);
@@ -169,6 +171,7 @@
   }
   &__list {
     position: relative;
+
     &:before{
       content: "";
       width: 200%;

@@ -2,4 +2,34 @@ extends template/layout
 block var
 	- var page = 'diagnosis'
 block content
+	section.diagnosis
+		+imagesHeader('diagnosis','General Orthopaedic Diagnosis – Boulder Prolotherapy',diagnosis)
+		.container
+			.diagnosis__container
+				.diagnosis__subheader
+					p.text-up At Boulder Prolotherapy we base our treatments on a solid differential diagnosis that is reached through a thorough medical history and physical examination.
+					+button('button','Contact Dr. Clark Now','ClarkNow')
+					p.text-down At Boulder Prolotherapy we base our treatments on a solid differential diagnosis that is reached through a thorough medical history and physical examination. Our physical exam is focused on an in-depth knowledge of functional anatomy, including:
+					ul.freim-list
+						li.freim-item Posture and gait analysis
+						li.freim-item Musculoskeletal (muscle and joint) functional testing, including range-of-motion and strength examinations
+						li.freim-item Palpatory examination for tender, edematous, or swollen musculoskeletal components-and
+						li.freim-item Ultrasound imaging for diagnosis and indirect needle guidance for Platelet-Rich Plasma Therapy.
+				.diagnosis__subheader
+
+					p.text-down We also obtain previously performed radiological imaging reports. If necessary, we obtain X-ray, MRI, or CAT scan imaging studies through the course of diagnosis and treatment. We have the expertise to diagnostically differentiate between:
+					ul.freim-list
+						li.freim-item The joint pain and referred pain of chronic sprain and misalignment injury — and
+						li.freim-item The joint pain and radicular pain attributed to degenerative disc disease.
+				.diagnosis__subheader
+					p.text-middle We recommend that any patient with cervical (neck), thoracic, lumbar (low back), or sacral paraspinal pain—especially that which is accompanied by a radiation or “radicular” pattern—be adequately assessed for underlying sprain injury, before deciding on surgery. That also applies to severe shoulder or hip pain and dysfunction.
+
+					p.text-down This recommendation also applies to any other joint injury that has become a surgical candidate—if there has not been an adequate musculoskeletal examination, you should consider obtaining one.
+
+				+social__link()
+	+diagnosis_list(diagnosis_list)
+	+pain(pain_list)
 	+treatments_list(treatments_list)
+	+slider(slider__data)
+	+contactUs()
+

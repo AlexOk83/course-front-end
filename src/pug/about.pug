@@ -2,7 +2,34 @@ extends template/layout
 block var
 	- var page = 'about'
 block content
-	.container
+	section.about-us
+		+imagesHeader('aboutus','About Orthopedic Medicine – Boulder Prolotherapy',aboutus)
+		.container
+			.about-us__container
+				.about-us__subheader
+					p.text-up Orthopedic Medicine consists of medical evaluation and nonsurgical treatment of the musculoskeletal system. Orthopedic Medicine is a hands-on approach to diagnosing and treating joint injuries and ailments.
+					+button('button','Contact Dr. Clark Now','ClarkNow')
+					p.text-down: <a class="text-down-link" href="#">  Orthopedic Medicine </a>
+						| consists of medical evaluation and nonsurgical treatment of the musculoskeletal system.  Modern tenants of Orthopedic Medicine are based on the teachings of Andrew T. Still, MD, DO, James H. Cyriax, MD, Thomas A. Dorman, MD, Philip E. Greenman, DO, George S. Hackett, MD, Deitrich Klinghardt, MD, Fred L. Mitchell, Sr., DO, Fred L. Mitchell, Jr., DO, Milne J. Ongley, MD, Thomas H. Ravin, MD,  Edward G. Stiles, DO, Janet G. Travell, MD, as well as many, many others.
+				.about-us__title The Hands-on Approach to Diagnosing and Treating Joint Injuries and Ailments
+				.about-us__text
+					<a class="text-down-link" href="#">Orthopedic Medicine </a>
+					| is a hands-on approach to diagnosing and treating joint injuries and ailments. Requiring medical or osteopathic licensure, orthopedic medical diagnosis demands a solid understanding of total body gross and functional anatomy, musculokeletal physiology, postural and gait analysis, and recognition of dysfunctional biotensegrity patterns. Orthopedic medical treatment requires, again, mastery of anatomy as well as skill in Osteopathic Manual Therapy, Orthotic Therapy, and various injection techniques, such as Prolotherapy and Neural Therapy.
+				.faq-page__images
+					each item in imagesSlider
+						img.faq-page__image(src= item.src alt= item.alt)
+				.about-us__textsubimages Orthopedic Medicine consists of medical evaluation and nonsurgical treatment of the musculoskeletal system
+
+				.about-us__subheader
+					p.text-middle <a class="text-down-link" href="#">The Orthopedic Medicine </a>  practitioner should have solid working familiarity with adjunct diagnostic modalities such as ultrasound, standard X-ray, fluoroscopy, CAT scan, and MRI imaging–however, radioimaging should not be the first diagnostic resort. The physcial examination comes first and foremost. The Orthopedic Medicine practitioner also needs to be familiar with adjunct therapeutic modalities, such as chiropractic, acupuncture, and biofeedback, as well as rehabilitative methods, such as Rolfing, Pilates, Biofeedback, and other supportive techniques–including psychological support of post-traumatic stress disorder (PTSD) and medical pharmaceutical and nonpharmaceutical support of acute and chronic pain.
+					p.text-down The Medical Orthopedist needs to have a good understanding of the opposing forces involved in maintaining healthy, normal Biotensegrity at the joint level. Biotensegrity is a relatively new medical concept regarding the forces acting on musculoskeletal balance, which is often disturbed by overwhelming physical forces (e.g., gravity and muscular movement or tension) resulting in clinically predictable (but often missed) joint injury, pain, and dysfunction.
+				+social__link()
+	+aboutUs()
+	.slider-wrapper
+		.container
+			+ slider(slider__data)
+	+contactUs()
+
 
 
 

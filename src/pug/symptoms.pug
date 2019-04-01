@@ -2,7 +2,19 @@ extends template/layout
 block var
 	- var page = 'symptoms'
 block content
+	section.symptoms
+		+imagesHeader('symptoms','Orthopedic Injury Symptoms – Boulder Prolotherapy',symptoms)
+		.container
+			.symptoms__container
+				.symptoms__subheader
+					p.text-up Boulder Prolotherapy at the Center for Healing Injury and Pain in Boulder, Colorado, offers therapies for ligamentous, muscular, myofascial, and joint problems resulting from normal wear-and-tear and and traumatic sprain injuries.
+					+button('button','Contact Dr. Clark Now','ClarkNow')
+					p.text-down Boulder Prolotherapy treats a wide variety of pain symptoms due to ligament and tendon sprain injury and joint dysfunction. To learn more about the potential causes of your pain, review the “Symptoms” buttons listed to the right and click on any that you are experiencing. Or go to section <a class="text-down-link" href="#">General Joint Injury and Dysfunction</a>.
+				+social__link()
+	+pain(pain_list)
 	+treatments_list(treatments_list)
+	+slider(slider__data)
+	+contactUs()
 
 
 

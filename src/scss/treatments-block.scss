@@ -293,6 +293,15 @@
   }
 }
   &__img{
+    &--diagnosis{
+      background-image:linear-gradient(0deg, rgba(23, 49, 139, 0.6), rgba(23, 49, 139, 0.6)), url('../images/head/diagnosis@2x.jpg');
+    }
+    &--symptoms{
+      background-image:linear-gradient(0deg, rgba(23, 49, 139, 0.6), rgba(23, 49, 139, 0.6)), url('../images/head/symptoms@2x.jpg');
+    }
+    &--aboutus{
+      background-image:linear-gradient(0deg, rgba(23, 49, 139, 0.6), rgba(23, 49, 139, 0.6)), url('../images/head/about@2x.jpg');
+    }
     &--faqpage{
       background-image:linear-gradient(0deg, rgba(23, 49, 139, 0.6), rgba(23, 49, 139, 0.6)), url('../images/head/faq@2x.jpg');
     }
@@ -345,6 +354,7 @@
     @include hide_device();
 
   }
+
 
   &__home{
     font-size: 18px;

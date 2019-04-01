@@ -457,10 +457,10 @@ jQuery(document).ready(function () {
 
 
     $('.faq-page__images').owlCarousel({
-        loop:true,
+        loop:false,
         responsiveClass:true,
         items: 1,
-        dots: false,
+        dots: true,
         nav: true,
         navText: ['','']
     });
