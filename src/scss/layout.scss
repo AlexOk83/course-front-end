@@ -224,6 +224,12 @@
     text-align: center;
 
     color: #000000;
+    &:hover{
+
+        background-color: $yellowHover;
+        box-shadow: 0 0 80px rgba(255, 214, 74, 0.6);
+      
+    }
   }
   &.active {
     right: 0;
