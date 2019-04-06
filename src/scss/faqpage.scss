@@ -162,6 +162,7 @@
   @include column(0,8,10,12,8);
   margin: 0 auto;
   margin-bottom: 40px;
+
   @include breakpoint($mobile_media){
     min-width: 767px;
   }
@@ -170,8 +171,10 @@
   }
   @include breakpoint($extra_mobile_media){
     display: none !important;
+
   }
   table{
+
     @include breakpoint($tablet_max_media){
 
     }
