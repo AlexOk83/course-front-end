@@ -1,5 +1,186 @@
 @import 'breakpoint';
 @import 'mixins';
 
+.header {
+  width: 100%;
+  height: 100vh;
+  @include bg('header-bg.png');
+  position: relative;
+  padding: 34px 35px 0;
+  &__top-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 360px;
+    @include breakpoint($tablet_max_media) {
+      margin-bottom: 30vh;
+    }
+  }
+  &__logo {
+    @include bg('logo.svg', 100%);
+    width: 155px;
+    height: 39px;
+  }
+  &__menu {
+    display: flex;
+    padding-top: 16px;
+    @include hide_device();
+  }
+  &__menu-item {
+    color: $white;
+    display: block;
+    padding-left: 44px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: rgba($white, 0.7);
+      position: absolute;
+      border-radius: 50%;
+      top: 6px;
+      left: 20px;
+    }
+    a:hover {
+      @extend %click;
+      opacity: 0.7;
+    }
+  }
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-size: 121px;
+    line-height: 142px;
+    color: $white;
+    margin-bottom: 36px;
+    @include breakpoint($tablet_max_media) {
+      font-size: 60px;
+      line-height: 70px;
+      margin-bottom: 25px;
+    }
+  }
+  &__sub-title {
+    font-size: 38px;
+    line-height: 45px;
+    letter-spacing: 0.12em;
+    color: $white;
+    text-align: center;
+    width: 100%;
+    @include breakpoint($tablet_max_media) {
+      font-size: 25px;
+      line-height: 32px;
+    }
+  }
+  &__button-scroll {
+    @extend %click;
+    position: absolute;
+    bottom: 116px;
+    left: 50%;
+    margin-left: -22px;
+    @include bg('union.svg', 100%);
+    width: 44px;
+    height: 71px;
+    @include breakpoint($tablet_max_media) {
+      width: 25px;
+      height: 42px;
+      bottom: 50px;
+    }
+  }
+  &__toggle-button {
+    @include hide_desktop();
+    @extend %click;
+    width: 26px;
+    height: 19px;
+    position: relative;
+    &--burger{
+      width: 26px;
+      height: 3px;
+      background-color: $white;
+      position: absolute;
+      top: 50%;
+      margin-top: -1.5px;
 
+      &:before,
+      &:after{
+        content: '';
+        width: 26px;
+        height: 3px;
+        background-color: $white;
+        position: absolute;
+        transition: all 0.2s ease-out;
+      }
+      &:before{
+        transform: translateY(-8px);
+      }
+      &:after{
+        transform: translateY(8px);
+      }
+    }
+    &--cross {
+      .header__toggle-button--burger {
+        height: 0;
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
 
+      }
+    }
+
+  }
+}
+.device-menu {
+  position: fixed;
+  width: 100%;
+  max-width: 250px;
+  background-color: $deviceMenuBg;
+  height: 100vh;
+  top: 0;
+  right: -250px;
+  transition: 0.5s ease-out;
+  padding: 20px;
+  &--open {
+    right: 0;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  &__menu-item {
+    display: block;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 15px;
+  }
+}
+.main {
+  transition: all 0.5s ease-out;
+  width: 100%;
+  display: block;
+  right: 0;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &--menu-open {
+    width: calc(100% - 250px);
+    @media screen and (max-width: 768px) {
+      height: 100vh;
+      overflow: hidden;
+      width: 100%;
+      top: 0;
+      right: 250px;
+      position: fixed;
+    }
+
+  }
+}

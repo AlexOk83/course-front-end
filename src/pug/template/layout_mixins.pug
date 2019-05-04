@@ -1,7 +1,26 @@
+mixin menu(menu, phone)
+	nav.header__menu
+		each item in menu
+			li.header__menu-item: a(href= item.link)= item.title
+		li.header__menu-item: span= phone
+mixin device_menu(menu, phone)
+	.device-menu
+		nav.device-menu__menu
+			each item in menu
+				li.device-menu__menu-item: a(href= item.link)= item.title
+			li.device-menu__menu-item: a(href=`tel:${phoneNumber}`)= phone
 
 mixin header()
 	header.header
-		.container
+		.header__top-container
+			.header__logo
+			+menu(menu, phone)
+			.header__toggle-button: span.header__toggle-button--burger
+		h1.header__title Кафе Бин
+		h2.header__sub-title Круглосуточный кафе-ресторан
+		.header__button-scroll
+
+
 
 mixin footer()
 	footer.footer

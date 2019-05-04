@@ -1,5 +1,11 @@
 @import "vars";
 
+%click {
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
 %text_overflow {
   text-overflow: ellipsis;
   white-space: nowrap;

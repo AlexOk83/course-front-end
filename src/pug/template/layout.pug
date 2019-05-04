@@ -14,8 +14,10 @@ html(lang="ru")
 		link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
 
 	body
-		+header(page)
-		block content
-		+footer()
+		+device_menu(menu, phone)
+		main.main
+			+header()
+			block content
+			+footer()
 		script(src='js/jquery.min.js')
 		script(src='js/main.js')

@@ -238,7 +238,12 @@ jQuery(document).ready(function () {
   })
 
 
+    $('.header__toggle-button').click(function () {
+      $(this).toggleClass('header__toggle-button--cross')
+      $('.main').toggleClass('main--menu-open');
+      $('.device-menu').toggleClass('device-menu--open');
 
+    });
 
 
 
