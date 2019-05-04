@@ -1,10 +1,3 @@
-$icomoon-font-family: "icons" !default;
-$icomoon-font-path: "../fonts" !default;
-
-$icon-facebook: "\e900";
-$icon-google: "\e901";
-$icon-linkdIn: "\e902";
-$icon-twitter: "\e903";
 
 $full_width: 100%;
 $width_column12: $full_width / 12;
@@ -36,16 +29,4 @@ $extra_desktop_width: 1920px;
 $extra_desktop_media: min-width 1920px;
 
 // colors
-$yellow: rgba(255, 214, 74, 0.9);
-$yellowHover: #FFDE6D;
-$yellowActive: #F0C533;
-$orange: #FF563E;
-$orangeHover: #FF624C;
-$orangeActive: #F6472F;
 
-$blue: #17318B;
-$bgHeader: $blue;
-$bgMain: $blue;
-
-$white: #ffffff;
-$gradient: linear-gradient(268.8deg, #0D62BB 0%, #1053AD 100%);

@@ -1,43 +1,12 @@
-mixin menu(menu, page, parent_class)
-	div(class= parent_class + '__menu')
-		each item in menu
-			if (page == item.url)
-				li(class= parent_class + '__menu-item ' + parent_class + '__menu-item--active')
-					a(href= item.url + '.html')= item.title
-			else
-				li(class= parent_class + '__menu-item')
-					a(href= item.url + '.html')= item.title
-mixin header(page)
-	header.header(class={'.header--main': page == 'index'})
-		.container
-			a.header__logo(href="index.html")= logo
-			+menu(menu, page, 'header')
-			.header__contacts
-				.header__contacts-button.form-control__button I Want To Avoid Surgery
-				.header__contacts-phone= phone
-			.header__device-cont
-				.header__device-phone
-				.header__toggle-button: span.header__toggle-button-lines
 
-mixin device_menu(page)
-	.device-toggle-content
+mixin header()
+	header.header
 		.container
-			+menu(menu, page, 'device-toggle-content')
-			.device-toggle-content__button I Want To Avoid Surgery
-			+social_icons()
 
 mixin footer()
 	footer.footer
 
-mixin toggleMenu()
-	.header__toggle-menu
 
-mixin social_icons()
-	.social-icons
-		a.icon.icon--linkdIn(href='#')
-		a.icon.icon--google(href='#')
-		a.icon.icon--facebook(href='#')
-		a.icon.icon--twitter(href='#')
 
 
 

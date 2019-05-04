@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: 16px/20px 'Catamaran', sans-serif;
+  font: 16px/20px 'roboto', sans-serif;
 }
 
 a, span {
@@ -24,6 +24,7 @@ a, span {
   @include breakpoint($tablet_min_media) {
     max-width: 740px;
   }
+
   @include breakpoint($desktop_media) {
     max-width: 1220 * $rem;
   }
