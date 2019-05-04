@@ -149,6 +149,7 @@
   right: -250px;
   transition: 0.5s ease-out;
   padding: 20px;
+  @include hide_desktop();
   &--open {
     right: 0;
   }
@@ -172,7 +173,9 @@
   overflow-x: hidden;
   overflow-y: auto;
   &--menu-open {
-    width: calc(100% - 250px);
+    @include breakpoint($tablet_max_media) {
+      width: calc(100% - 250px);
+    }
     @media screen and (max-width: 768px) {
       height: 100vh;
       overflow: hidden;
@@ -181,6 +184,5 @@
       right: 250px;
       position: fixed;
     }
-
   }
 }
