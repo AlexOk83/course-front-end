@@ -1,2 +1,161 @@
 @import 'breakpoint';
 @import 'mixins';
+
+.about {
+  margin-top: -40px;
+  background: $aboutBg;
+  &__line {
+    display: flex;
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      .about__wrapper {
+        width: 850px;
+      }
+      .about__image {
+        width: 350px;
+      }
+    }
+  }
+  &__wrapper {
+    background-color: $white;
+    width: 350px;
+    min-height: 350px;
+    padding: 60px 34px 44px;
+    text-align: center;
+  }
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-family: billabong, roboto;
+    font-size: 64px;
+    line-height: 75px;
+    color: $blackText;
+    margin-bottom: 45px;
+
+  }
+  &__text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $greyText;
+    margin-bottom: 30px;
+  }
+  &__form {
+    display: none;
+    &.active {
+      display: block;
+    }
+
+    padding: 10px 16px;
+    input {
+      width: 100%;
+      line-height: 18px;
+      font-size: 12px;
+      border: none;
+      border-bottom: 1px solid $braun;
+      &::placeholder {
+        color: $placeholder;
+      }
+    }
+    .btn {
+      margin-top: 40px;
+    }
+  }
+  &__image {
+    position: relative;
+    width: 850px;
+    img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.f-bludes {
+  margin-top: -80px;
+  &__title {
+    height: 575px + 120px;
+    @include bg('OB83DI0.png');
+    display: flex;
+    &-text {
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      color: $white;
+      font-size: 38px;
+      line-height: 45px;
+      letter-spacing: 0.12em;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -40px;
+  }
+  &__item {
+    @include column(0, 6, 6);
+    display: flex;
+    &:nth-child(4n),
+    &:nth-child(3n) {
+      flex-direction: row-reverse;
+    }
+    &-wrapper {
+      width: 50%;
+      background-color: $white;
+    }
+    &-title {
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      line-height: 28px;
+      color: $blackText;
+      margin-bottom: 31px;
+
+    }
+    &-text {
+      width: 100%;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: $greyText;
+      margin-bottom: 30px;
+    }
+    &-image {
+      position: relative;
+      width: 50%;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+      }
+      img {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.btn {
+  max-width: 100%;
+  display: inline-block;
+  line-height: 38px;
+  padding: 0 18px;
+  color: $braun;
+  border: 1px solid $braun;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: $white;
+  @extend %click;
+}

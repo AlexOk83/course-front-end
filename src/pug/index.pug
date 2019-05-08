@@ -1,5 +1,28 @@
 extends template/layout
 block content
+	.about
+		.container
+			each item in about
+				.about__line
+					.about__wrapper
+						h2.about__title= item.title
+						p.about__text= item.text
+						if (item.isForm)
+							+form()
+					.about__image
+						+image(item.image, item.title)
+	.f-bludes
+		.f-bludes__title: h2.f-bludes__title-text ФИРМЕННЫЕ БЛЮДА
+		.container
+			.f-bludes__list
+				each item in bludesList
+					.f-bludes__item
+						.f-bludes__item-wrapper
+							.f-bludes__item-title= item.title
+							.f-bludes__item-text= item.text
+							.f-bludes__item-price= item.price
+						.f-bludes__item-image
+							+image(item.image, item.title)
 
 
 

@@ -1,2 +1,9 @@
 include example-code
 
+mixin form()
+	.btn#rezervForm Забронировать
+	form.about__form
+		input(type='text', name='name', placeholder='Имя', required='true')
+		input(type='tel', name='phone', placeholder='Телефон', required='true')
+		input(type='text', name='time', placeholder='Желаемое время', required='true')
+		button(type='submit').btn ЗАРЕЗЕРВИРОВАТЬ

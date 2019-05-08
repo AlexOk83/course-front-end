@@ -60,7 +60,7 @@
     width: 100%;
     text-align: center;
     font-size: 121px;
-    font-family: 'billabong';
+    font-family: 'billabong', 'roboto';
     line-height: 142px;
     color: $white;
     margin-bottom: 36px;
@@ -162,6 +162,9 @@
   &__menu {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
   }
   &__menu-item {
     display: block;

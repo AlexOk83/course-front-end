@@ -182,6 +182,7 @@ jQuery(document).ready(function () {
   });
 
   $('[name="phone"]').mask("+7(999)999-99-99");
+  $('[name="time"]').mask("99:99");
 
   var validate = function (el) {
       var value = el.val();
@@ -237,6 +238,10 @@ jQuery(document).ready(function () {
       }
   })
 
+    $('#rezervForm').click(function () {
+       $(this).hide();
+       $('.about__form').addClass('active');
+    });
 
     $('.header__toggle-button').click(function () {
       $(this).toggleClass('header__toggle-button--cross')
