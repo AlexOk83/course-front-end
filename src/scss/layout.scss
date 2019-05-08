@@ -2,6 +2,7 @@
 @import 'mixins';
 
 .header {
+
   width: 100%;
   height: 100vh;
   @include bg('header-bg.png');
@@ -16,6 +17,7 @@
     }
   }
   &__logo {
+
     @include bg('logo.svg', 100%);
     width: 155px;
     height: 39px;
@@ -58,9 +60,12 @@
     width: 100%;
     text-align: center;
     font-size: 121px;
+    font-family: 'billabong';
     line-height: 142px;
     color: $white;
     margin-bottom: 36px;
+    font-weight: normal;
+    font-style: normal;
     @include breakpoint($tablet_max_media) {
       font-size: 60px;
       line-height: 70px;
@@ -74,6 +79,7 @@
     color: $white;
     text-align: center;
     width: 100%;
+    font-family: 'roboto';
     @include breakpoint($tablet_max_media) {
       font-size: 25px;
       line-height: 32px;
