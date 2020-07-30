@@ -15,20 +15,8 @@ html(lang="ru")
 		link(rel="styleSheet", media="all", type="text/css", href="css/style.min.css")
 
 	body
-		block var
-		if (page == 'index')
-			.main
-				+header(page)
-				+device_menu(page)
-				main
-					block content
-				+footer(page)
-		else
-			+header(page)
-			+device_menu(page)
-			main
-				block content
-			+footer(page)
+		block content
+
 		script(src='js/jquery.min.js')
 		script(src='js/owl.carousel.js')
 		script(src='js/main.js')
