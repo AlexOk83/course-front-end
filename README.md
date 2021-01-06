@@ -1,2 +1,4 @@
 # course-front-end
-this repository create for learn front-end develop
+в ветке `master` нужно собрать все наработки по данному проекту 
+
+[Макет](https://www.figma.com/file/G1r3tOxy625vwsyWhwnFQrcs/Boulder-Prolotherapy?node-id=35%3A163)
