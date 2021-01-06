@@ -1,0 +1,342 @@
+.faq-page{
+  background: #E5E5E5;
+  &__container{
+    @include column(0,8,10);
+    margin: 0 auto;
+  }
+  &__subheader{
+
+    .text-up{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 30px;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+    .text-down{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 30px;
+      color: #333333;
+    }
+    margin-bottom: 25px;
+  }
+  &__images{
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 8px;
+    .owl-stage-outer {
+      width: 100%;
+      overflow: hidden;
+    }
+    .owl-stage {
+      display: flex;
+      @include breakpoint($mobile_media){
+
+        margin-bottom: 15px;
+
+      }
+    }
+    .owl-item {
+      float: left;
+      border-radius: 8px;
+      .active{
+        border-radius: 8px;
+        .cloned{
+          border-radius: 8px;
+        }
+      }
+    }
+    .owl-nav {
+      border: none;
+      width: 120%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto  ;
+      position: absolute;
+      left: -10%;
+      bottom: 50%;
+
+      @include breakpoint($mobile_media){
+        left: 0;
+        width: 100%;
+        bottom: 0;
+
+
+      }
+      .owl-prev{
+        border: none;
+        left: 0;
+        top: 50%;
+        width: 27px;
+        height: 18px;
+        outline: none;
+        cursor: pointer;
+        background-color: #e5e5e5;
+        background-image: url("../images/Sprite_b.svg");
+        background-position-x: -180px;
+        background-position-y: -21px;
+
+       &.disabled{
+          opacity: 0.4;
+        }
+      }
+      .owl-next{
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 27px;
+        height: 18px;
+
+        outline: none;
+        cursor: pointer;
+        background-color: #e5e5e5;
+        background-image: url("../images/Sprite_b.svg");
+        background-position-x: -211px;
+        background-position-y: -21px;
+        &.disabled{
+          opacity: 0.4;
+        }
+      }
+      &.disabled {
+        display: none;
+      }
+    }
+    .owl-dots {
+      z-index: 111;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      position: absolute;
+      bottom:-40px;
+      left: 0;
+      @include breakpoint($mobile_media){
+        bottom:-2px;
+      }
+    }
+    .owl-dot {
+
+      margin-left: 5px;
+      margin-right: 5px;
+      background: rgba(51, 51, 51, 0.1);;
+      border-radius: 50%;
+      width: 9px;
+      height: 9px;
+      border: 0;
+      &.active {
+        background-color: $bgMain;
+      }
+    }
+  }
+  &__image{
+    width: 100%;
+    border-radius: 8px;
+  }
+  &__textsubimages{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(51, 51, 51, 0.5);
+    margin-bottom: 25px;
+    @include breakpoint($mobile_media){
+
+      margin-top: 15px;
+
+    }
+  }
+  &__text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #222222;
+    margin-bottom: 40px;
+  }
+}
+.table{
+  @include column(0,8,10,12,8);
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @include breakpoint($mobile_media){
+    min-width: 767px;
+  }
+  @include breakpoint($extra_mobile_media2){
+    min-width: 450px;
+  }
+  @include breakpoint($extra_mobile_media){
+    display: none !important;
+
+  }
+  table{
+
+    @include breakpoint($tablet_max_media){
+
+    }
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    thead{
+      text-align: left;
+      border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+
+      th{
+
+        width: 33%;
+        margin-right: 20px;
+        padding: 10px 10px 10px 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #333333;
+      }
+
+    }
+    tbody{
+      border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+      tr{
+
+        margin-bottom: 41px;
+      }
+      td{
+        vertical-align: top;
+        text-align: left;
+        table-layout: fixed;
+        padding: 20px 10px 20px 0;
+        font-size: 18px;
+        line-height: 27px;
+
+        color: #333333;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+      }
+    }
+  }
+}
+
+
+.freim {
+  @include column(0,8,10);
+  margin: 0 auto;
+  &-h2{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 25px;
+    color: #222222;
+  }
+  &-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 39px;
+    color: #222222;
+
+  }
+  &-saying{
+
+    min-height: 304px;
+    background: linear-gradient(244.53deg, #087CD5 0.54%, #1053AD 71%);
+    box-shadow: 0 0 120px rgba(118, 216, 251, 0.15);
+    border-radius: 8px;
+    margin-bottom: 41px;
+    &_text{
+      padding: 51px 0 0 60px;
+      margin-left: 60px;
+      @include column(0,8,6,6);
+      font-style: normal;
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 39px;
+      color: #FFFFFF;
+      margin-bottom: 25px;
+      position: relative;
+      @include breakpoint($mobile_media){
+        margin-left: 2%;
+        margin-bottom: 25px;
+      }
+      &:before{
+        @include hide_device();
+        content: "";
+        position: absolute;
+        top: 20%;
+        right: -26%;
+        width: 64px;
+        height: 51px;
+        background-image: url("../images/svg/Prophsaid.svg");
+      }
+    }
+    &_ps{
+      margin-left: 60px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(255, 255, 255, 0.5);
+      @include breakpoint($mobile_media){
+
+        padding-bottom: 25px;
+      }
+      @include breakpoint($tablet_max_media){
+
+        padding-bottom: 25px;
+      }
+    }
+  }
+  &-video{
+    width: 100%;
+    min-height: 440px;
+    margin-bottom: 40px;
+    iframe{
+      width: 100%;
+    }
+  }
+  &-textnext{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 25px;
+    color: #222222;
+  }
+
+  &-list{
+    margin-bottom: 25px;
+    margin-left: 48px;
+    list-style-type: disc;
+
+
+  }
+  &-item{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #333333;
+
+  }
+  .social-link{
+    margin-bottom: 100px;
+  }
+}
+.questions{
+  &-h2{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333333;
+  }
+  .faq-block__list{
+    padding-bottom: 100px;
+  }
+}

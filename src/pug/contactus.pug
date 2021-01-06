@@ -1,0 +1,18 @@
+extends template/layout
+
+block var
+	- var page = 'contactus'
+block content
+	.container
+		.header-contact_content
+			.contact
+				h2.contact-title= 'Contact Us Today'
+				p.contact-subtitle= 'Boulder Prolotherapy at the Center for Orthopedic Medicine is located at 1790 30th Street, Suite 230 — in the Sussex One Building – Boulder, Colorado.'
+				p.contact-send= 'Send Gary your contact details through the form below and he will contact you shortly.'
+				p.contact-phone= 'Our phone and fax number is (303) 444-5131'
+			form.form
+				+input('text', 'Name*', 'firstName', 'true')
+				+input('email', 'Email Address*', 'email', 'true')
+				+input('tel', 'Phone Number*', 'phone', 'true')
+				+input('textarea', 'Message', 'description')
+				+button('submit',"Send Message", "submit")

@@ -456,4 +456,15 @@ jQuery(document).ready(function () {
   })
 
 
+    $('.faq-page__images').owlCarousel({
+        loop:false,
+        responsiveClass:true,
+        items: 1,
+        dots: true,
+        nav: true,
+        navText: ['','']
+    });
+
+
+
 });

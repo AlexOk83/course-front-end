@@ -1,0 +1,172 @@
+.faq-block{
+  background: #E5E5E5;
+  &__text{
+
+  }
+  &__subtext{
+    @include column(0,8,10);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #333333;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  &__list{
+    margin: 0 auto;
+    @include row_grid($padding_10);
+    .form-control__button--faqread{
+      margin-bottom: 40px;
+      max-width: 140px;
+      font-weight: bold;
+      font-size: 18px;
+
+      text-align: center;
+      height: 37px;
+      color: #000000;
+      outline: none;
+      line-height: 37px;
+
+    }
+  }
+  &__item{
+    @include column($padding_10,4,6,6);
+  }
+  &__img{
+    margin-bottom: 20px;
+    width: 100%;
+
+      object-fit: contain;
+
+  }
+  &__h3{
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  &__subtitle{
+    @include column(0,12,12,12);
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgba(51, 51, 51, 0.9);
+    margin-bottom: 20px;
+  }
+
+}
+
+%afterbefore{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #222;
+}
+
+.pagination {
+  display: flex;
+  padding-top: 48px;
+  min-height: 30px;
+  padding-bottom: 108px;
+
+  &_arrow-prev {
+    position: relative;
+    width: 26px;
+    height: 14px;
+    margin-right: auto;
+    cursor: pointer;
+    .arrow-prev {
+
+      position: absolute;
+      top: 100%;
+      width: 20px;
+      height: 2px;
+      background-color: #222;
+
+      &:before {
+        transform: rotate(-35deg);
+        transform-origin: left bottom;
+        left: 0;
+        @extend %afterbefore;
+      }
+
+      &:after {
+        transform: rotate(35deg);
+        transform-origin: left top;
+        left: 0;
+        @extend %afterbefore;
+      }
+    }
+
+  }
+
+  &_arrow-next {
+    cursor: pointer;
+    position: relative;
+    width: 26px;
+    height: 14px;
+    margin-left: auto;
+
+    .arrow-prev {
+      position: absolute;
+      top: 100%;
+      width: 20px;
+      height: 2px;
+      background-color: #222;
+
+      &:before {
+        transform: rotate(-35deg);
+        right: 0;
+        transform-origin: right bottom;
+        @extend %afterbefore;
+      }
+
+      &:after {
+        transform: rotate(35deg);
+        right: 0;
+        transform-origin: right top;
+        @extend %afterbefore;
+
+      }
+    }
+
+
+  }
+  &_list{
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  &_item{
+    min-width: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    display: none;
+    color: rgba(51, 51, 51, 0.9);
+    &:first-child,
+    &:last-child,
+    &--next,
+    &--prev
+    {
+      display: block;
+    }
+    &.active {
+      color: yellow;
+      display: block;
+
+    }
+  }
+}

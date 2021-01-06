@@ -65,23 +65,20 @@
             <div class="form-control form-control--undefined">
               <textarea class="form-control__textarea" placeholder="Примечание" name="description"></textarea>
             </div>
-            <div class="form-control">
-              <select class="form-control__select" name="age" value="до 18 лет">
-                <option value="до 14 лет">до 14 лет</option>
-                <option value="до 18 лет">до 18 лет</option>
-                <option value="старше 18 лет">старше 18 лет</option>
+            <div class="form_select">
+              <select placeholder="до 18 лет" name="[{&quot;value&quot;:&quot;до 14 лет&quot;,&quot;title&quot;:&quot;до 14 лет&quot;},{&quot;value&quot;:&quot;до 18 лет&quot;,&quot;title&quot;:&quot;до 18 лет&quot;},{&quot;value&quot;:&quot;старше 18 лет&quot;,&quot;title&quot;:&quot;старше 18 лет&quot;}]">
+                <option value="">до 18 лет</option>
+                <option value="a">a</option>
+                <option value="g">g</option>
+                <option value="e">e</option>
               </select>
             </div>
-            <div class="form-control">
-              <input class="form-control__radio" type="radio" id="male" name="sex" value="male">
-              <label for="male">Мужской</label>
-            </div>
-            <div class="form-control">
-              <input class="form-control__radio" type="radio" id="female" name="sex" value="female">
-              <label for="female">Женский</label>
-            </div>
-            <div class="form-control">
-              <input class="form-control__checkbox" type="checkbox" id="igree" name="igree" data-required="true">
+            <input type="radio" id="Мужской" value="Мужской" name="sex">
+            <label for="Мужской">male</label>
+            <input type="radio" id="Женский" value="Женский" name="sex">
+            <label for="Женский">female</label>
+            <div class="form__control">
+              <input type="checkbox" id="igree" name="igree">
               <label for="igree">Согласен на обработку данных</label>
             </div>
             <button class="form-control__button form-control__button--orange" type="submit">Отправить</button>
@@ -123,6 +120,7 @@
       </div>
     </footer>
     <script src="js/jquery.min.js"></script>
+    <script src="js/pagination.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
   </body>

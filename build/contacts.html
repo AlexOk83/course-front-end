@@ -9,42 +9,72 @@
     <link rel="styleSheet" media="all" type="text/css" href="css/style.min.css">
   </head>
   <body>
-    <header class="header">
-      <div class="container"><a class="header__logo" href="index.html">Boulder Prolotherapy</a>
-        <div class="header__menu">
-          <li class="header__menu-item"><a href="about.html">About Us</a></li>
-          <li class="header__menu-item"><a href="symptoms.html">Symptoms</a></li>
-          <li class="header__menu-item"><a href="diagnosis.html">Diagnosis</a></li>
-          <li class="header__menu-item"><a href="treatments.html">Treatments</a></li>
-          <li class="header__menu-item"><a href="faq.html">FAQ</a></li>
-          <li class="header__menu-item"><a href="contacts.html">Contacts</a></li>
+    <div class="contacts-wrapper">
+      <header class="header">
+        <div class="container"><a class="header__logo" href="index.html">Boulder Prolotherapy</a>
+          <div class="header__menu">
+            <li class="header__menu-item"><a href="about.html">About Us</a></li>
+            <li class="header__menu-item"><a href="symptoms.html">Symptoms</a></li>
+            <li class="header__menu-item"><a href="diagnosis.html">Diagnosis</a></li>
+            <li class="header__menu-item"><a href="treatments.html">Treatments</a></li>
+            <li class="header__menu-item"><a href="faq.html">FAQ</a></li>
+            <li class="header__menu-item header__menu-item--active"><a href="contacts.html">Contacts</a></li>
+          </div>
+          <div class="header__contacts">
+            <div class="header__contacts-button form-control__button">I Want To Avoid Surgery</div>
+            <div class="header__contacts-phone">303 444 5131</div>
+          </div>
+          <div class="header__device-cont">
+            <div class="header__device-phone"></div>
+            <div class="header__toggle-button"><span class="header__toggle-button-lines"></span></div>
+          </div>
         </div>
-        <div class="header__contacts">
-          <div class="header__contacts-button form-control__button">I Want To Avoid Surgery</div>
-          <div class="header__contacts-phone">303 444 5131</div>
-        </div>
-        <div class="header__device-cont">
-          <div class="header__device-phone"></div>
-          <div class="header__toggle-button"><span class="header__toggle-button-lines"></span></div>
+      </header>
+      <div class="device-toggle-content">
+        <div class="container">
+          <div class="device-toggle-content__menu">
+            <li class="device-toggle-content__menu-item"><a href="about.html">About Us</a></li>
+            <li class="device-toggle-content__menu-item"><a href="symptoms.html">Symptoms</a></li>
+            <li class="device-toggle-content__menu-item"><a href="diagnosis.html">Diagnosis</a></li>
+            <li class="device-toggle-content__menu-item"><a href="treatments.html">Treatments</a></li>
+            <li class="device-toggle-content__menu-item"><a href="faq.html">FAQ</a></li>
+            <li class="device-toggle-content__menu-item device-toggle-content__menu-item--active"><a href="contacts.html">Contacts</a></li>
+          </div>
+          <div class="device-toggle-content__button">I Want To Avoid Surgery</div>
+          <div class="social-icons"><a class="icon icon--linkdIn" href="#"></a><a class="icon icon--google" href="#"></a><a class="icon icon--facebook" href="#"></a><a class="icon icon--twitter" href="#"></a></div>
         </div>
       </div>
-    </header>
-    <div class="device-toggle-content">
-      <div class="container">
-        <div class="device-toggle-content__menu">
-          <li class="device-toggle-content__menu-item"><a href="about.html">About Us</a></li>
-          <li class="device-toggle-content__menu-item"><a href="symptoms.html">Symptoms</a></li>
-          <li class="device-toggle-content__menu-item"><a href="diagnosis.html">Diagnosis</a></li>
-          <li class="device-toggle-content__menu-item"><a href="treatments.html">Treatments</a></li>
-          <li class="device-toggle-content__menu-item"><a href="faq.html">FAQ</a></li>
-          <li class="device-toggle-content__menu-item"><a href="contacts.html">Contacts</a></li>
+      <main>
+        <div class="container">
+          <div class="contacts-link-title-button">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a href="index.html">Home /</a></li>
+              <li class="breadcrumbs__item"><a class="active" href="contacts.html">Contacts</a>
+              </li>
+            </ul>
+            <h2 class="contacts-title">Boulder Prolotherapy</h2>
+            <div class="contacts-phone">303 444 5131</div>
+            <div class="contacts-address">Gary B. Clark, MD, MPA, 1790 30th Street, Suite 230, Boulder, CO</div>
+            <button class="form-control__button form-control__button--ClarkNow" type="button">Contact Dr. Clark Now</button>
+          </div>
         </div>
-        <div class="device-toggle-content__button">I Want To Avoid Surgery</div>
-        <div class="social-icons"><a class="icon icon--linkdIn" href="#"></a><a class="icon icon--google" href="#"></a><a class="icon icon--facebook" href="#"></a><a class="icon icon--twitter" href="#"></a></div>
-      </div>
+        <div class="container">
+          <div class="contacts-map"></div>
+        </div>
+        <section class="treatments-contacts">
+          <div class="container">
+            <div class="treatments-contacts_wrapper">
+              <div class="treatments-contacts__img"><img src="../images/contact/man5_32@2x.png" width="719" height="560"></div>
+              <div class="treatments-contacts__text">
+                <h2 class="treatments-contacts__title">Contact Us Today</h2>
+                <p class="treatments-contacts__subtitle">Our overall goal is to resolve the underlying structural causes of your pain, while relieving you of long-term dependency prescription analgesic medications. Write to us using the button below or call</p>
+                <p class="treatments-contacts__phone">303 444 5131</p><a class="form-control__button form-control__button--contactUs" href="contactus.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <main>
-    </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__row">
@@ -55,7 +85,7 @@
               <li class="footer__menu-item"><a href="diagnosis.html">Diagnosis</a></li>
               <li class="footer__menu-item"><a href="treatments.html">Treatments</a></li>
               <li class="footer__menu-item"><a href="faq.html">FAQ</a></li>
-              <li class="footer__menu-item"><a href="contacts.html">Contacts</a></li>
+              <li class="footer__menu-item footer__menu-item--active"><a href="contacts.html">Contacts</a></li>
             </div>
             <div class="social-icons"><a class="icon icon--linkdIn" href="#"></a><a class="icon icon--google" href="#"></a><a class="icon icon--facebook" href="#"></a><a class="icon icon--twitter" href="#"></a></div>
           </div>
@@ -79,6 +109,7 @@
       </div>
     </footer>
     <script src="js/jquery.min.js"></script>
+    <script src="js/pagination.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/main.js"></script>
   </body>

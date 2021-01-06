@@ -128,7 +128,7 @@ mixin radio(id, name, label, req)
 	input(type="radio" id= id, value= id, name= name, data-req= req)
 	label(for= id)= label
 
-mixin input(type, name, label, req)
+mixin inputs(type, name, label, req)
 	.form_control
 		if (type == "ta")
 			textarea(name= name, placeholder= label, data-req= req)

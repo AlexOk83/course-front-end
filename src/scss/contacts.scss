@@ -1,0 +1,86 @@
+.contacts{
+
+  &-wrapper{
+    background-color: #17318B;
+    position: relative;
+    background-repeat: no-repeat ;
+
+    .header{
+      background: none;
+      &:before{
+        background: none;
+        width: 0;
+      }
+    }
+    .treatments-contacts{
+     // background: linear-gradient(241.38deg, #36007B -0.47%, #18318B 54.26%, #0782DB 94.41%);
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      min-height: 800px;
+      filter: blur(50px);
+      background: linear-gradient(241.38deg, #36007B -0.47%, #18318B 54.26%, #0782DB 94.41%);
+    }
+  }
+  &-link-title-button{
+    padding-top: 55px;
+    @include column($padding_container,8,8);
+    margin: 0 auto;
+  }
+  &-link{
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-bottom: 10px;
+  }
+  &-title{
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 57px;
+    color: #FCFCFC;
+    margin-bottom: 25px;
+  }
+  &-phone{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+  &-address{
+
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 33px;
+  }
+  .form-control__button--ClarkNow{
+    margin-bottom: 40px;
+
+  }
+  &-map{
+    min-height: 463px;
+    border-radius: 8px;
+
+    position: relative;
+    width: 100%;
+  @include bg('image4.png');
+    &:before{
+      content: '';
+      display: flex;
+      justify-content: center;
+      left: 51%;
+      top: 35%;
+      position: absolute;
+      width: 30px;
+      height: 46px;
+      @include bg('map@2x.png');
+      @include breakpoint($tablet_max_media){
+
+      }
+    }
+  }
+}

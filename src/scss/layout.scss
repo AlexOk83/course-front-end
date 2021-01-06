@@ -12,39 +12,15 @@
   margin-bottom: 13px;
 }
 
-.main {
-  width: 100%;
-  min-height: 100vh;
 
-  background-color: $bgHeader;
-  /*
-  background-image:
-    url('../images/main-bg.svg'),
-    url('../images/main%20man/3anatomy_2@2x.png'),
-    linear-gradient(238.51deg, #36007B 10.05%, #18318B 53.01%, #0782DB 84.52%);
-  background-repeat:
-    repeat-x,
-    no-repeat,
-    no-repeat;
-  background-position:
-    0 520px,
-    -189px -7px,
-    top;
-  background-size:
-    auto,
-    77%,
-    100% 1000px;
-  position: relative;*/
-  .header {
-    &:before {
-      display: none;
-    }
-  }
-}
 
 .header {
-  padding-top: 34px;
   position: relative;
+  z-index: 3;
+  padding-top: 34px;
+
+  background-color: $bgHeader;
+  padding-bottom: 20px;
   @media screen and (max-width: 1279px) {
     z-index: 300;
   }
@@ -79,15 +55,29 @@
     margin-left: 45px;
     display: flex;
     flex-basis: 100%;
+
     @include hide_device();
   }
   &__menu-item {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: normal;
+
+    color: #E5E5E5;
+
     margin-right: 20px;
-    color: $white;
+
     white-space: nowrap;
     display: block;
-    &:hover {
-      text-decoration: underline;
+    a{
+      transition: all .1s ease-in-out;
+      &:hover {
+        color: $yellow;
+      }
+    }
+    &--active{
+      color: $yellow;
     }
   }
   &__contacts {
@@ -187,15 +177,15 @@
   &:before {
     content: '';
     display: block;
-    width: 300vh;
-    height: 300vh;
+    width: 800vh;
+    height: 800vh;
     background-color: $blue;
     position: absolute;
-    top: calc(-150vh + 30px);
-    right: calc(-150vh + 19px);
+    top: calc(-400vh + 30px);
+    right: calc(-400vh + 19px);
     border-radius: 50%;
     transform: scale(0);
-    transition: all 1s ease-out;
+    transition: all 0.2s ease-out;
   }
   .container {
     margin-top: 116px;
@@ -221,9 +211,25 @@
   .social-icons {
     margin-top: 40px;
     margin-bottom: 40px;
+    .icon{
+      font-size: 30px;
+    }
   }
   &__button {
     @extend %button;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: normal;
+    text-align: center;
+
+    color: #000000;
+    &:hover{
+
+        background-color: $yellowHover;
+        box-shadow: 0 0 80px rgba(255, 214, 74, 0.6);
+
+    }
   }
   &.active {
     right: 0;
@@ -231,7 +237,7 @@
       transform: scale(1);
     }
     .container {
-      @include animate(menu, 0.5s, 0.5s);
+      @include animate(menu, 0.2s, 0.2s);
     }
   }
 }
@@ -248,7 +254,7 @@
 .social-icons {
   .icon {
     color: $yellow;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     text-decoration: none;
     width: 30px;
@@ -340,11 +346,12 @@
   }
 
   &__copy-raiting{
-    display: flex;
+
     @include column($padding_container, 8, 8);
     @include breakpoint($tablet_max_media){
       flex-direction: column;
     }
+    display: flex;
   }
   &__copy{
     margin-right: 30px;
@@ -372,7 +379,7 @@
   &__design{
     text-align: right;
     opacity: 0.6;
-    align-self: flex-end;
+    //align-self: flex-end;
     @include column($padding_container, 4, 4);
     @include breakpoint($mobile_media){
       text-align: left;

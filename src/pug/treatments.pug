@@ -2,4 +2,18 @@ extends template/layout
 block var
 	- var page = 'treatments'
 block content
-	+treatments_list(treatments_list)
+	section.info-block
+		+imagesHeader('treatments','Orthopedic Treatment – Boulder Prolotherapy',treatments)
+		.container
+			.info-block__text
+				.info-block__list.list
+					.info-block__item: p.list__text= textHealing
+					.info-block__item: +button('button','Contact Dr. Clark Now','ClarkNow')
+					.info-block__item: p.list__option= textOption
+					.info-block__item: p.list__optionNext= textOptionNext
+					.info-block__item: +social__link()
+	+pain(pain_list)
+	.slider-wrapper
+		.container
+			+ slider(slider__data)
+	+contactUs()

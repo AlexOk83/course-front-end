@@ -1,5 +1,14 @@
 extends template/layout
 block var
-	- var page = 'Contacts'
+	- var page = 'contacts'
 block content
-
+		.container
+			.contacts-link-title-button
+				+breadcrumbs(contact)
+				h2.contacts-title= 'Boulder Prolotherapy'
+				.contacts-phone= phone
+				.contacts-address= 'Gary B. Clark, MD, MPA, 1790 30th Street, Suite 230, Boulder, CO'
+				+button('button','Contact Dr. Clark Now','ClarkNow')
+		.container
+			.contacts-map
+		+contactUs()

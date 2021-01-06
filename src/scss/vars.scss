@@ -13,6 +13,7 @@ $width_column10: $full_width / 10;
 
 $rem: 1rem / 16;
 $padding_container: 20*$rem;
+$padding_10: 10*$rem;
 $padding_1: 30*$rem;
 $padding_2: 40*$rem;
 
@@ -20,6 +21,7 @@ $pathImages: "../images/";
 
 $extra_mobile_width: 500px;
 $extra_mobile_media: max-width 500px;
+$extra_mobile_media2: max-width 700px;
 
 $mobile_width: 767px;
 $mobile_media: max-width 767px;
@@ -43,10 +45,10 @@ $yellowActive: #F0C533;
 $orange: #FF563E;
 $orangeHover: #FF624C;
 $orangeActive: #F6472F;
-
+$blueLink: #087CD5;
 $blue: #17318B;
 $bgHeader: $blue;
 $bgMain: $blue;
-
+$bgsecondary: #E5E5E5;
 $white: #ffffff;
 $gradient: linear-gradient(268.8deg, #0D62BB 0%, #1053AD 100%);

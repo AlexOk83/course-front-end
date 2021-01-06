@@ -19,6 +19,12 @@
 }
 
 .treatments {
+  &_list__wrapper{
+    background-color: $bgMain;
+    padding-bottom: 60px;
+
+    overflow: hidden;
+  }
   &__row{
     @include row_grid($padding_1);
     justify-content: center;

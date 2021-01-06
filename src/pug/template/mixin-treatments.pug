@@ -1,0 +1,106 @@
+include example-code
+
+mixin imagesHeader(classImg,title,mas)
+		.header-images
+			.container
+				.header-images__img(class='header-images__img--'+ classImg)
+			.container
+				.header-images__link
+					+breadcrumbs(mas)
+				h2.header-images__title= title
+
+mixin breadcrumbs(mas)
+	ul.breadcrumbs__list
+		li.breadcrumbs__item: a(href="index.html") Home /
+		each item in mas
+			li.breadcrumbs__item
+				if(page==="faqpage")
+					a(href="faq.html") FAQ /
+					li.breadcrumbs__item
+						a(href= item.url+'.html',class={'active': page === item.url})= item.name
+				else
+					a(href= item.url+'.html',class={'active': page === item.url})= item.name
+
+
+mixin social__link()
+	.social-link
+		.social-link__list
+			.social-link__item: a.icons.social-link-fb_like(href='#')
+			.social-link__item: a.icons.social-link-fb_share(href='#')
+			.social-link__item: a.icons.social-link-tweeter(href='#')
+			.social-link__item: a.icons.social-link-gplus(href='#')
+			.social-link__item: a.icons.social-link-inLinks(href='#')
+			.social-link__item: p.social-link__text Thanks for reading! Please like and share.
+
+
+
+mixin pagination(active_page)
+	.pagination
+		.pagination_arrow-prev
+			span.arrow-prev
+		.pagination_list
+			-for(let i=0; i<66; i++)
+				if (i === active_page - 4)
+					.pagination_item.pagination_item--prev: a(href='#') ...
+				if (i >= active_page - 3 && i < active_page)
+					.pagination_item.pagination_item--prev: a(href='#')= i+1
+				else if (active_page === i)
+					.pagination_item.active: a(href='#')= i+1
+				else if (i > active_page && i <= active_page + 3)
+					.pagination_item.pagination_item--next: a(href='#')= i+1
+				else if (i === active_page + 4)
+					.pagination_item.pagination_item--prev: a(href='#') ...
+				else
+					.pagination_item: a(href='#')= i+1
+		.pagination_arrow-next
+			span.arrow-prev
+
+
+
+
+mixin contactUs()
+	section.treatments-contacts
+		.container
+			.treatments-contacts_wrapper
+				.treatments-contacts__img
+					img(src="../images/contact/man5_32@2x.png" width='719' height='560')
+				.treatments-contacts__text
+					h2.treatments-contacts__title Contact Us Today
+					p.treatments-contacts__subtitle Our overall goal is to resolve the underlying structural causes of your pain, while relieving you of long-term dependency prescription analgesic medications. Write to us using the button below or call
+					p.treatments-contacts__phone= phone
+					+alink('Contact Us','contactUs',"contactus.html")
+
+
+mixin about()
+	section.about-boulder
+		.container
+			.about-boulder_wrapper
+				.about-boulder__img--stat
+					img(src="../images/about/aboutus@2x.png" width='719' height='560')
+				.about-boulder__img--glass
+					img(src="../images/meet/1123.png" width='719' height='560')
+				.about-boulder__text
+					h2.about-boulder__title About Boulder Prolotherapy
+					p.about-boulder__subtitle Dr. Clark offers medical and osteopathic-style diagnoses and therapies to effectively treat painful and disabling skeletal misalignment, muscle and ligament sprain injuries and osteoarthritis. This includes sacroiliac joint dysfunction, short/long leg, syndrome and scoliosis in all age groups. His approach is "cutting edge" hands-on, holistic and integrative. If you have musculoskeletal pain or dysfunction, then Boulder Prolotherapy is just the right clinic for you.
+					+alink('Learn More About Boulder Prolotherapy','learnabout',"#")
+
+mixin aboutUs()
+	section.aboutus-boulder
+		.container
+			.about-boulder_wrapper
+
+				.about-boulder__img--glass
+					img(src="../images/meet/1123.png" width='719' height='560')
+				.about-boulder__text
+					h2.about-boulder__title Meet Doctor Clark
+					p.about-boulder__subtitle Dr. Clark has extensive and broad clinical training in General Medicine and Orthopedic Medicine, along with extensive experience in osteopathic-style musculoskeletal diagnosis and therapies. He supports the Hackett-Hemwall Foundation. He is a member in good standing of the Colorado and Boulder County Medical Societies and American Association of Orthopedic Medicine.  He is a member of the editorial board of The Journal of Prolotherapy.
+					+alink('Learn More About Dr. Gary B. Clark','learnabout',"#")
+
+mixin faqlist(list,count)
+
+		each item in list
+			.faq-block__item
+				img.faq-block__img(src= item.src width='380' height='205')
+				h3.faq-block__h3= item.title
+				p.faq-block__subtitle= item.subtitle
+				+alink('Read more','faqread','faqpage.html')

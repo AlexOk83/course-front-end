@@ -1,0 +1,106 @@
+
+@import 'breakpoint';
+@import 'mixins';
+//.advantages {
+//  margin-top: 85px;
+//  color: $white;
+//  &__header-wrapper {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: flex-end;
+//  }
+//  &__header {
+//    width: 780px;
+//    margin-bottom: 2px;
+//    font-weight: 800;
+//    font-size: 50px;
+//    line-height: 57px;
+//    padding-right: 112px;
+//  }
+//  &__header-description {
+//    width: 780px;
+//    margin-bottom: 25px;
+//    font-weight: 800;
+//    font-size: 28px;
+//    line-height: normal;
+//  }
+//  &__button-appointment {
+//    margin-right: 500px;
+//    margin-bottom: 70px;
+//    font-style: normal;
+//    font-weight: bold;
+//    font-size: 22px;
+//  }
+//  &__description {
+//    width: 580px;
+//    font-style: normal;
+//    font-weight: normal;
+//    font-size: 20px;
+//    line-height: 30px;
+//  }
+//  &__list {
+//    display: flex;
+//    margin-top: 185px;
+//    justify-content: space-between;
+//  }
+//  &__item {
+//
+//  }
+//  &__item-header {
+//    margin-top: -25px;
+//    padding: 0 65px;
+//    font-style: normal;
+//    font-weight: bold;
+//    font-size: 22px;
+//    line-height: 27px;
+//    text-align: center;
+//    opacity: 0.9;
+//  }
+//  &__item-description {
+//    width: 240px;
+//    margin: 10px auto;
+//    font-size: 18px;
+//    line-height: 27px;
+//    text-align: center;
+//    color: rgba(255, 255, 255, 0.9);
+//  }
+//}
+//.main {
+//  width: 100%;
+//  min-height: 100vh;
+//
+//  background-color: $bgHeader;
+//  background-image:      url('../images/main_bg_lawyer.svg'),
+//  url('../images/main%20man/3anatomy_2@2x.png'),
+//  linear-gradient(238.51deg, #36007B 10.05%, #18318B 53.01%, #0782DB 84.52%);
+//  background-repeat:
+//          repeat-x,
+//          no-repeat,
+//          no-repeat;
+//  background-position:
+//          0 520px,
+//          -189px -7px,
+//          top;
+//  background-size:
+//          auto,
+//          77%,
+//          100% 1000px;
+//  @include breakpoint($tablet_max_media) {
+//    background-position:
+//            0 160px,
+//            -189px -7px,
+//            top;
+//    background-size:
+//            auto,
+//            100%,
+//            100% 1000px;
+//  }
+//  position: relative;
+//  .
+//  .header {
+//    background-color: transparent;
+//    &:before {
+//      display: none;
+//    }
+//  }
+//}
