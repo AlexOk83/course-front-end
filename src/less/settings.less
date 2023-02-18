@@ -1,15 +1,28 @@
-@import "mixin";
-@import "var";
-
+@import "mixins";
 * {
-  font: normal normal 16px/18px sans-serif;
+  font: normal normal 36px/52px 'Roboto', sans-serif ;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  .media_tablet({
+    .font(24px, 32px);
+  })
 }
 
 body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
