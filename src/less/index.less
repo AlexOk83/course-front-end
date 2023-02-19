@@ -1,177 +1,40 @@
 @import "mixins";
 
-@left_bg: #0a2896;
-@help_bg: #009ceb;
+.new-header {
+  position: fixed;
+  width: 100%;
 
-.page {
-  display: flex;
-  &__left {
-    background-color: @left_bg;
-    padding: 32px;
-    width: 344px;
-    height: 100vh;
-    position: relative;
-
-    * {
-      color: white;
-    }
-
-    .logo {
-      margin-bottom: 132px;
-    }
+  .logo-header-horizontal {
+    margin-top: -25px;
   }
-  &__welcome {
-    .font(20px, 1.5);
-  }
-
-  &__help {
-    position: absolute;
-    left: 0;
-    bottom: 32px;
-    &:hover {
-      .page__help-content {
-        transform: scale(1);
-      }
-      .page__help-button {
-        &:before {
-          left: 50px;
-        }
-        .close {
-          left: 5px;
-        }
-      }
-    }
-    &-button {
-      width: 32px;
-      height: 32px;
-      border-radius: 2px;
-      background-color: @help_bg;
-      position: relative;
-      overflow: hidden;
-      &:before {
-        content: '?';
-        position: absolute;
-        .font(12px, 20px, bold);
-        text-align: center;
-        .circle(18px);
-        top: 5px;
-        left: 5px;
-        border: 2px solid white;
-        display: block;
-        transition: left 0.3s ease-out;
-      }
-      .close{
-        position: absolute;
-        top: 5px;
-        left: -50px;
-        transition: left 0.3s ease-out;
-        width: 18px;
-        height: 18px;
-        &:before {
-          content: '';
-          position: absolute;
-          top: 2px;
-          left: 9px;
-          transform: rotate(45deg);
-          display: block;
-          width: 1px;
-          height: 18px;
-          border-right: 2px solid white;
-        }
-        &:after {
-          content: '';
-          top: 2px;
-          left: 9px;
-          position: absolute;
-          transform: rotate(-45deg);
-          display: block;
-          width: 1px;
-          height: 18px;
-          border-right: 2px solid white;
-        }
-      }
-
-    }
-    &-content {
-      position: absolute;
-      transform: scale(0);
-      transform-origin: bottom left;
-      bottom: 32px;
-      left: 0;
-      background-color: @help_bg;
-      width: 344px;
-      padding: 12px 23px 16px 32px;
-      transition: transform 0.3s ease-out;
-      .contact {
-        margin-bottom: 8px;
-
-        .title {
-          .font(12px, 16px);
-          margin-bottom: 4px;
-        }
-
-        .value {
-          .font(16px, 20px, 500);
-        }
-
-
-      }
-    }
-    &-title {
-      .font(14px, 20px);
-      margin-bottom: 8px;
-    }
-  }
-
-  &__content {
-    padding-left: 85px;
-    padding-top: 32px;
-    width: calc(100% - 344px);
-
-    .button__link {
+  &__menu-container {
+    padding-top: 35px;
+    &:before {
+      content: '';
       display: block;
-      background-color: @help_bg;
-      color: white;
-      width: 276px;
-      height: 40px;
-      border-radius: 2px;
-      .font(14px, 40px, 500);
-      text-align: center;
-    }
-  }
-  &__title {
-    .font(40px, 1.2, 300);
-    color: #111314;
-    margin-bottom: 64px;
-  }
-  &__list {
-    .list__item {
-      position: relative;
-      padding-left: 16px + 32px;
-      margin-bottom: 24px;
-      min-height: 32px;
-      display: flex;
-      align-content: center;
-      align-items: center;
-
-      &-number {
-        .circle(32px);
-        position: absolute;
-        top: 0;
-        left: 0;
-        border: 2px solid #899AA3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .font(16px, 1.43, bold);
-        color: #899AA3;
-      }
-      &-text {
-        .font(14px, 1.43);
-      }
+      width: 30%;
+      height: 45px;
+      position: absolute;
+      right: 0;
+      top: 35px;
+      background-color: @brand_color;
     }
   }
 
+  &__menu {
+    display: flex;
+    border-radius: 3px 0 0 3px;
+    justify-content: flex-end;
+    background-color: @brand_color;
 
+  }
 
+  &__menu-item {
+    .font(14px, 45px, bold);
+    margin-left: 20px;
+    text-transform: uppercase;
+    a {
+      color: @white_color;
+    }
+  }
 }
