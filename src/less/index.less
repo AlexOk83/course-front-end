@@ -31,10 +31,45 @@
 
   &__menu-item {
     .font(14px, 45px, bold);
-    margin-left: 20px;
+    position: relative;
+    padding: 0 10px;
     text-transform: uppercase;
     a {
       color: @white_color;
+    }
+    &:hover {
+      background-color: @gray_color;
+      .new-header__sub-menu {
+        transform: scaleY(1);
+        a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__sub-menu {
+    flex-direction: column;
+    min-width: 230px;
+    display: flex;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.3s ease-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: @gray_color;
+  }
+
+  &__sub-menu-item {
+    .font(14px, 45px, bold);
+    padding: 0 20px;
+    text-transform: uppercase;
+    a {
+      color: @white_color;
+      opacity: 0;
+      transition-delay: .5s;
+      transition: opacity 0.2s ease-out;
     }
   }
 }

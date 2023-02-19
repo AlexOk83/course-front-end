@@ -11,6 +11,12 @@ block content
 					each item in menu
 						li.new-header__menu-item
 							a(href= item.url)= item.title
+							if (item.submenu)
+								ul.new-header__sub-menu
+									each subitem in item.submenu
+										li.new-header__sub-menu-item
+											a(href= subitem.url)= subitem.title
+
 
 
 
