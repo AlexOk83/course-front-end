@@ -3,10 +3,10 @@ extends templates/layout
 block content
 	.new-header.new-header__menu-container
 		.c-container
-			.lg-12-3.md-12-2
+			.lg-12-3.md-12-2.xs-12-6
 				.logo-header-horizontal
 					a(href='/'): img(src='http://teatr-koleso.ru/res/images/logo-horizontal_black.svg')
-			.lg-12-9.md-12-10
+			.lg-12-9.md-12-10.xs-12-6
 				ul.new-header__menu.hidden-md-down
 					each item in menu
 						li.new-header__menu-item
@@ -16,7 +16,8 @@ block content
 									each subitem in item.submenu
 										li.new-header__sub-menu-item
 											a(href= subitem.url)= subitem.title
-
+				.new-header__mobile-menu.hidden-md-up
+					.btn-menu-toggle
 
 
 

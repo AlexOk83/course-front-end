@@ -6,6 +6,12 @@
 
   .logo-header-horizontal {
     margin-top: -25px;
+    .media_tablet({
+      margin-top: -5px;
+    });
+    .media_mobile({
+      margin-top: 0;
+    });
   }
   &__menu-container {
     padding-top: 35px;
@@ -71,5 +77,47 @@
       transition-delay: .5s;
       transition: opacity 0.2s ease-out;
     }
+  }
+
+  &__mobile-menu {
+    display: flex;
+    border-radius: 3px 0 0 3px;
+    height: 45px;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 5px 15px;
+    background-color: @brand_color;
+  }
+}
+
+.btn-menu-toggle {
+  width: 34px;
+  height: 34px;
+  padding: 7px 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 110;
+  &:before {
+    content: '';
+    width: 25px;
+    left: 5px;
+    display: block;
+    height: 7px;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    top: 7px;
+    border-top: 2px solid #fff;
+    transition: all .3s ease-out;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    transition: all .3s ease-out;
+    width: 25px;
+    left: 5px;
+    display: block;
+    height: 7px;
+    border-bottom: 2px solid #fff;
   }
 }
